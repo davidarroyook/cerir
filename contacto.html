@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto — CERIR</title>
+<meta name="description" content="Escribinos o visitanos: Riobamba 250 bis, Rosario, Santa Fe. Centro de Estudios en Relaciones Internacionales de Rosario.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-inner">
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<!-- ============================================================ HEADER -->
+<header class="header is-solid" id="header">
+  <div class="header__inner">
+    <a class="logo" href="index.html" aria-label="CERIR — inicio">
+      <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
+    </a>
+
+    <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span class="burger__label">Menú</span>
+      <span class="burger__box" aria-hidden="true">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </span>
+    </button>
+  </div>
+  <div class="header__progress" id="scrollProgress" aria-hidden="true"></div>
+</header>
+
+<!-- ============================================================ NAV OVERLAY -->
+<nav class="nav" id="nav" aria-label="Navegación principal" aria-hidden="true">
+  <div class="nav__inner">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="index.html"><span class="nav__idx">01</span> Inicio</a></li>
+      <li class="nav__item"><a href="institucional.html"><span class="nav__idx">02</span> Institucional</a></li>
+      <li class="nav__item"><a href="novedades.html"><span class="nav__idx">03</span> Novedades</a></li>
+      <li class="nav__item"><a href="publicaciones.html"><span class="nav__idx">04</span> Publicaciones</a></li>
+      <li class="nav__item"><a href="contacto.html"><span class="nav__idx">05</span> Contacto</a></li>
+    </ul>
+
+    <div class="nav__aside">
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Sede</h3>
+        <p>Riobamba 250 bis<br>Rosario, Santa Fe<br>Argentina</p>
+      </div>
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Contacto</h3>
+        <p><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a><br><a href="tel:+543414802620">+54 341 480 2620</a></p>
+      </div>
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Redes</h3>
+        <p class="nav__social">
+          <a href="#">Instagram</a><a href="#">X</a><a href="#">LinkedIn</a><a href="#">YouTube</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ========================================================== CABECERA -->
+  <section class="page-head">
+    <div class="container">
+      <h1 class="page-head__title" data-reveal>Contacto</h1>
+      <p class="page-head__lead" data-reveal>
+        Escribinos por consultas de investigación, prensa, convocatorias o visitas
+        a la sede. Respondemos dentro de los días hábiles siguientes.
+      </p>
+
+      <ul class="contact-data" data-reveal>
+        <li>
+          <span class="contact-data__label">Dirección</span>
+          <span class="contact-data__value">Riobamba 250 bis<br>Rosario, Santa Fe</span>
+        </li>
+        <li>
+          <span class="contact-data__label">Correo</span>
+          <span class="contact-data__value"><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a></span>
+        </li>
+        <li>
+          <span class="contact-data__label">Teléfono</span>
+          <span class="contact-data__value"><a href="tel:+543414802620">+54 341 480 2620</a></span>
+        </li>
+        <li>
+          <span class="contact-data__label">Horario</span>
+          <span class="contact-data__value">Lunes a viernes<br>9 a 17 h</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================================================== DOS COLUMNAS 50/50 -->
+  <section class="contact">
+    <div class="container">
+      <div class="contact__grid">
+
+        <!-- columna izquierda: mapa -->
+        <div class="contact__map" data-reveal>
+          <iframe
+            title="Mapa con la ubicación del CERIR en Riobamba 250 bis, Rosario"
+            src="https://www.google.com/maps?q=Riobamba%20250%20bis%2C%20Rosario%2C%20Santa%20Fe%2C%20Argentina&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+
+        <!-- columna derecha: formulario -->
+        <div class="contact__formWrap" data-reveal>
+          <h2 class="contact__title">Escribinos</h2>
+
+          <form class="form" id="contactForm" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="cName">Nombre y apellido</label>
+              <input class="form__input" type="text" id="cName" name="nombre"
+                     autocomplete="name" placeholder="Como te llamás" required
+                     aria-describedby="cNameError">
+              <p class="form__error" id="cNameError"></p>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="cEmail">Email</label>
+              <input class="form__input" type="email" id="cEmail" name="email"
+                     autocomplete="email" placeholder="tu@correo.com" required
+                     aria-describedby="cEmailError">
+              <p class="form__error" id="cEmailError"></p>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="cMessage">Mensaje</label>
+              <textarea class="form__input form__input--area" id="cMessage" name="mensaje"
+                        rows="6" placeholder="Contanos en qué podemos ayudarte" required
+                        aria-describedby="cMessageError"></textarea>
+              <p class="form__error" id="cMessageError"></p>
+            </div>
+
+            <button class="btn btn--accent form__submit" type="submit">
+              Enviar mensaje
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+
+            <p class="form__status" id="contactStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================ FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div class="footer__col footer__col--brand">
+        <a class="logo logo--inverted" href="index.html" aria-label="CERIR — inicio">
+          <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
+        </a>
+        <p class="footer__about">
+          Centro de Estudios en Relaciones Internacionales de Rosario.<br>
+          Facultad de Ciencia Política y RR.II. — UNR.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Secciones</h3>
+        <ul class="footer__list">
+          <li><a href="institucional.html">Institucional</a></li>
+          <li><a href="index.html#cifras">Investigación</a></li>
+          <li><a href="index.html#novedades">Novedades</a></li>
+          <li><a href="index.html#miembros">Miembros</a></li>
+          <li><a href="publicaciones.html">Publicaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Redes</h3>
+        <ul class="footer__list footer__list--social">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X / Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Academia.edu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Contacto</h3>
+        <ul class="footer__list">
+          <li>Riobamba 250 bis</li>
+          <li>Rosario, Santa Fe, Argentina</li>
+          <li><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a></li>
+          <li><a href="tel:+543414802620">+54 341 480 2620</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottomInner">
+      <p>© <span id="year">2026</span> CERIR — Centro de Estudios en Relaciones Internacionales de Rosario. Todos los derechos reservados.</p>
+      <p class="footer__legal"><a href="#">Términos</a><a href="#">Privacidad</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

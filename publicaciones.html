@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publicaciones — CERIR</title>
+<meta name="description" content="Publicaciones del Centro de Estudios en Relaciones Internacionales de Rosario, disponibles para descargar en PDF.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-inner">
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<!-- ============================================================ HEADER -->
+<header class="header is-solid" id="header">
+  <div class="header__inner">
+    <a class="logo" href="index.html" aria-label="CERIR — inicio">
+      <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
+    </a>
+
+    <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span class="burger__label">Menú</span>
+      <span class="burger__box" aria-hidden="true">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </span>
+    </button>
+  </div>
+  <div class="header__progress" id="scrollProgress" aria-hidden="true"></div>
+</header>
+
+<!-- ============================================================ NAV OVERLAY -->
+<nav class="nav" id="nav" aria-label="Navegación principal" aria-hidden="true">
+  <div class="nav__inner">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="index.html"><span class="nav__idx">01</span> Inicio</a></li>
+      <li class="nav__item"><a href="institucional.html"><span class="nav__idx">02</span> Institucional</a></li>
+      <li class="nav__item"><a href="novedades.html"><span class="nav__idx">03</span> Novedades</a></li>
+      <li class="nav__item"><a href="publicaciones.html"><span class="nav__idx">04</span> Publicaciones</a></li>
+      <li class="nav__item"><a href="contacto.html"><span class="nav__idx">05</span> Contacto</a></li>
+    </ul>
+
+    <div class="nav__aside">
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Sede</h3>
+        <p>Riobamba 250 bis<br>Rosario, Santa Fe<br>Argentina</p>
+      </div>
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Contacto</h3>
+        <p><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a><br><a href="tel:+543414802620">+54 341 480 2620</a></p>
+      </div>
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Redes</h3>
+        <p class="nav__social">
+          <a href="#">Instagram</a><a href="#">X</a><a href="#">LinkedIn</a><a href="#">YouTube</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ========================================================== DESTACADA -->
+  <section class="pubs-hero">
+    <div class="container">
+      <header class="pubs-hero__head">
+        <h1 class="pubs-hero__title" data-reveal>Publicaciones</h1>
+        <p class="pubs-hero__lead" data-reveal>
+          La producción editorial del centro, disponible para descargar en PDF.
+        </p>
+      </header>
+
+      <p class="pubs-hero__kicker" data-reveal>
+        <span class="dot"></span> Última publicación
+      </p>
+
+      <article class="feature" id="pubFeature" data-reveal>
+        <a class="feature__media" id="fMedia" href="#" aria-label="Descargar la última publicación">
+          <img id="fCover" src="" alt="" width="900" height="1200">
+        </a>
+        <div class="feature__body">
+          <span class="chip" id="fCollection"></span>
+          <h2 class="feature__title" id="fTitle"></h2>
+          <p class="feature__desc" id="fDesc"></p>
+          <ul class="feature__meta" id="fMeta"></ul>
+          <a class="btn btn--accent" id="fDownload" href="#" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0 5-5m-5 5-5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            Descargar PDF
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ========================================================== ANTERIORES -->
+  <section class="pubs-group" id="anteriores">
+    <div class="container">
+      <header class="pubs-group__head">
+        <h2 class="section-title" data-reveal>Publicaciones anteriores</h2>
+        <div class="carousel__nav">
+          <button class="circle-btn" type="button" data-carousel-prev="prevPubs" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" type="button" data-carousel-next="prevPubs" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="carousel" data-carousel="prevPubs">
+        <ul class="carousel__track" id="pubsPrev" tabindex="0" role="region"
+            aria-label="Publicaciones anteriores"></ul>
+        <div class="carousel__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== COMPLEMENTARIAS -->
+  <section class="pubs-group pubs-group--alt" id="complementarias">
+    <div class="container">
+      <header class="pubs-group__head">
+        <h2 class="section-title" data-reveal>Publicaciones complementarias</h2>
+        <div class="carousel__nav">
+          <button class="circle-btn" type="button" data-carousel-prev="compPubs" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" type="button" data-carousel-next="compPubs" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="carousel" data-carousel="compPubs">
+        <ul class="carousel__track" id="pubsComp" tabindex="0" role="region"
+            aria-label="Publicaciones complementarias"></ul>
+        <div class="carousel__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================ FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div class="footer__col footer__col--brand">
+        <a class="logo logo--inverted" href="index.html" aria-label="CERIR — inicio">
+          <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
+        </a>
+        <p class="footer__about">
+          Centro de Estudios en Relaciones Internacionales de Rosario.<br>
+          Facultad de Ciencia Política y RR.II. — UNR.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Secciones</h3>
+        <ul class="footer__list">
+          <li><a href="institucional.html">Institucional</a></li>
+          <li><a href="index.html#cifras">Investigación</a></li>
+          <li><a href="index.html#novedades">Novedades</a></li>
+          <li><a href="index.html#miembros">Miembros</a></li>
+          <li><a href="publicaciones.html">Publicaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Redes</h3>
+        <ul class="footer__list footer__list--social">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X / Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Academia.edu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Contacto</h3>
+        <ul class="footer__list">
+          <li>Riobamba 250 bis</li>
+          <li>Rosario, Santa Fe, Argentina</li>
+          <li><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a></li>
+          <li><a href="tel:+543414802620">+54 341 480 2620</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottomInner">
+      <p>© <span id="year">2026</span> CERIR — Centro de Estudios en Relaciones Internacionales de Rosario. Todos los derechos reservados.</p>
+      <p class="footer__legal"><a href="#">Términos</a><a href="#">Privacidad</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/inner.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novedades — CERIR</title>
+<meta name="description" content="Novedades del CERIR: maestría, actividades del centro, graduados y tesis defendidas.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-inner">
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<!-- ============================================================ HEADER -->
+<header class="header is-solid" id="header">
+  <div class="header__inner">
+    <a class="logo" href="index.html" aria-label="CERIR — inicio">
+      <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
+    </a>
+
+    <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span class="burger__label">Menú</span>
+      <span class="burger__box" aria-hidden="true">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </span>
+    </button>
+  </div>
+  <div class="header__progress" id="scrollProgress" aria-hidden="true"></div>
+</header>
+
+<!-- ============================================================ NAV OVERLAY -->
+<nav class="nav" id="nav" aria-label="Navegación principal" aria-hidden="true">
+  <div class="nav__inner">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="index.html"><span class="nav__idx">01</span> Inicio</a></li>
+      <li class="nav__item"><a href="institucional.html"><span class="nav__idx">02</span> Institucional</a></li>
+      <li class="nav__item"><a href="novedades.html"><span class="nav__idx">03</span> Novedades</a></li>
+      <li class="nav__item"><a href="publicaciones.html"><span class="nav__idx">04</span> Publicaciones</a></li>
+      <li class="nav__item"><a href="contacto.html"><span class="nav__idx">05</span> Contacto</a></li>
+    </ul>
+
+    <div class="nav__aside">
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Sede</h3>
+        <p>Riobamba 250 bis<br>Rosario, Santa Fe<br>Argentina</p>
+      </div>
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Contacto</h3>
+        <p><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a><br><a href="tel:+543414802620">+54 341 480 2620</a></p>
+      </div>
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Redes</h3>
+        <p class="nav__social">
+          <a href="#">Instagram</a><a href="#">X</a><a href="#">LinkedIn</a><a href="#">YouTube</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ========================================================== CABECERA + PASTILLAS -->
+  <section class="page-head">
+    <div class="container">
+      <h1 class="page-head__title" data-reveal>Novedades</h1>
+      <p class="page-head__lead" data-reveal>
+        Todo lo que pasa en el centro, ordenado por tema. Elegí una categoría
+        para ir directo a su carrusel.
+      </p>
+      <ul class="page-head__index" data-reveal>
+        <li><a href="#maestria">Maestría</a></li>
+        <li><a href="#cerir">CERIR</a></li>
+        <li><a href="#graduados">Graduados</a></li>
+        <li><a href="#tesis">Tesis defendidas</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================================================== MAESTRÍA -->
+  <section class="posts-group" id="maestria">
+    <div class="container">
+      <header class="posts-group__head">
+        <div>
+          <h2 class="section-title" data-reveal>Maestría</h2>
+          <p class="posts-group__lead" data-reveal>Inscripciones, seminarios y defensas de la Maestría en Relaciones Internacionales.</p>
+        </div>
+        <div class="carousel__nav">
+          <button class="circle-btn" type="button" data-carousel-prev="maestria" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" type="button" data-carousel-next="maestria" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="carousel" data-carousel="maestria">
+        <ul class="carousel__track" id="postsMaestria" tabindex="0" role="region" aria-label="Novedades de la Maestría"></ul>
+        <div class="carousel__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== CERIR -->
+  <section class="posts-group posts-group--alt" id="cerir">
+    <div class="container">
+      <header class="posts-group__head">
+        <div>
+          <h2 class="section-title" data-reveal>CERIR</h2>
+          <p class="posts-group__lead" data-reveal>Actividades, publicaciones y convocatorias del centro.</p>
+        </div>
+        <div class="carousel__nav">
+          <button class="circle-btn" type="button" data-carousel-prev="cerir" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" type="button" data-carousel-next="cerir" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="carousel" data-carousel="cerir">
+        <ul class="carousel__track" id="postsCerir" tabindex="0" role="region" aria-label="Novedades del CERIR"></ul>
+        <div class="carousel__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== GRADUADOS -->
+  <section class="posts-group" id="graduados">
+    <div class="container">
+      <header class="posts-group__head">
+        <div>
+          <h2 class="section-title" data-reveal>Graduados</h2>
+          <p class="posts-group__lead" data-reveal>Encuentros, mentorías e inserción profesional de nuestros graduados.</p>
+        </div>
+        <div class="carousel__nav">
+          <button class="circle-btn" type="button" data-carousel-prev="graduados" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" type="button" data-carousel-next="graduados" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="carousel" data-carousel="graduados">
+        <ul class="carousel__track" id="postsGraduados" tabindex="0" role="region" aria-label="Novedades de graduados"></ul>
+        <div class="carousel__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== TESIS DEFENDIDAS -->
+  <section class="posts-group posts-group--alt" id="tesis">
+    <div class="container">
+      <header class="posts-group__head">
+        <div>
+          <h2 class="section-title" data-reveal>Tesis defendidas</h2>
+          <p class="posts-group__lead" data-reveal>Investigaciones de doctorado y maestría defendidas en los últimos meses.</p>
+        </div>
+        <div class="carousel__nav">
+          <button class="circle-btn" type="button" data-carousel-prev="tesis" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" type="button" data-carousel-next="tesis" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="carousel" data-carousel="tesis">
+        <ul class="carousel__track" id="postsTesis" tabindex="0" role="region" aria-label="Tesis defendidas"></ul>
+        <div class="carousel__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================ FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div class="footer__col footer__col--brand">
+        <a class="logo logo--inverted" href="index.html" aria-label="CERIR — inicio">
+          <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
+        </a>
+        <p class="footer__about">
+          Centro de Estudios en Relaciones Internacionales de Rosario.<br>
+          Facultad de Ciencia Política y RR.II. — UNR.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Secciones</h3>
+        <ul class="footer__list">
+          <li><a href="institucional.html">Institucional</a></li>
+          <li><a href="novedades.html">Novedades</a></li>
+          <li><a href="publicaciones.html">Publicaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Redes</h3>
+        <ul class="footer__list footer__list--social">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X / Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Academia.edu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Contacto</h3>
+        <ul class="footer__list">
+          <li>Riobamba 250 bis</li>
+          <li>Rosario, Santa Fe, Argentina</li>
+          <li><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a></li>
+          <li><a href="tel:+543414802620">+54 341 480 2620</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottomInner">
+      <p>© <span id="year">2026</span> CERIR — Centro de Estudios en Relaciones Internacionales de Rosario. Todos los derechos reservados.</p>
+      <p class="footer__legal"><a href="#">Términos</a><a href="#">Privacidad</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/inner.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CERIR — Centro de Estudios en Relaciones Internacionales de Rosario</title>
+<meta name="description" content="El CERIR, fundado en 1987, reúne docentes de la Facultad de Ciencia Política y Relaciones Internacionales de la UNR e investigadores del CONICET.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#hero">Saltar al contenido</a>
+
+<!-- ============================================================ HEADER -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="logo" href="#hero" aria-label="CERIR — inicio">
+      <!-- <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+        <ellipse cx="20" cy="20" rx="7.5" ry="18" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".65"/>
+        <path d="M3 14h34M3 26h34M2 20h36" stroke="currentColor" stroke-width="1.4" opacity=".65"/>
+      </svg>
+      <span class="logo__text">CERIR</span> -->
+      <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
+    </a>
+
+    <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span class="burger__label">Menú</span>
+      <span class="burger__box" aria-hidden="true">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </span>
+    </button>
+  </div>
+  <div class="header__progress" id="scrollProgress" aria-hidden="true"></div>
+</header>
+
+<!-- ============================================================ NAV OVERLAY -->
+<nav class="nav" id="nav" aria-label="Navegación principal" aria-hidden="true">
+  <div class="nav__inner">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="#hero"><span class="nav__idx">01</span> Inicio</a></li>
+      <li class="nav__item"><a href="institucional.html"><span class="nav__idx">02</span> Institucional</a></li>
+      <li class="nav__item"><a href="#cifras"><span class="nav__idx">03</span> Investigación</a></li>
+      <li class="nav__item"><a href="#novedades"><span class="nav__idx">04</span> Novedades</a></li>
+      <li class="nav__item"><a href="#miembros"><span class="nav__idx">05</span> Miembros</a></li>
+      <li class="nav__item"><a href="contacto.html"><span class="nav__idx">05</span> Contacto</a></li>
+    </ul>
+
+    <div class="nav__aside">
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Sede</h3>
+        <p>Riobamba 250 bis<br>Rosario, Santa Fe<br>Argentina</p>
+      </div>
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Contacto</h3>
+        <p><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a><br><a href="tel:+543414802620">+54 341 480 2620</a></p>
+      </div>
+      <div class="nav__block">
+        <h3 class="nav__blockTitle">Redes</h3>
+        <p class="nav__social">
+          <a href="#">Instagram</a><a href="#">X</a><a href="#">LinkedIn</a><a href="#">YouTube</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ========================================================== HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <!--
+        Planisferio animado (canvas). Si querés usar un video real,
+        descomentá el bloque de abajo y agregá la clase `has-video`
+        al elemento .hero__media: el canvas se oculta automáticamente.
+
+        <video class="hero__video" autoplay muted loop playsinline
+               poster="assets/img/hero-poster.jpg">
+          <source src="assets/video/world-connections.webm" type="video/webm">
+          <source src="assets/video/world-connections.mp4" type="video/mp4">
+        </video>
+      -->
+      <canvas class="hero__canvas" id="worldMap" aria-hidden="true"></canvas>
+      <div class="hero__scrim"></div>
+    </div>
+
+    <div class="hero__content container">
+      <p class="hero__eyebrow" data-reveal>
+        <span class="dot"></span> Fundado en 1987 · Rosario, Argentina
+      </p>
+      <h1 class="hero__title">
+        <span class="line">Centro de Estudios en</span>
+        <span class="line">Relaciones Internacionales</span>
+        <span class="line">de <em>Rosario</em></span>
+      </h1>
+      <p class="hero__lead" data-reveal>
+        Investigación, docencia, publicaciones sobre política exterior Argentina
+        y agenda global.
+      </p>
+    </div>
+
+    <a class="hero__scroll" href="#cifras" aria-label="Bajar">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14m0 0 6-6m-6 6-6-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+    </a>
+  </section>
+
+  <!-- ========================================================== COUNTERS -->
+  <section class="stats" id="cifras">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat">
+          <span class="stat__num" data-count="48">0</span>
+          <span class="stat__label">Investigadores</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="126">0</span>
+          <span class="stat__label">Miembros</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="340" data-suffix="+">0</span>
+          <span class="stat__label">Publicaciones</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="89000" data-suffix="+">0</span>
+          <span class="stat__label">Visitas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== NOVEDADES -->
+  <section class="news" id="novedades">
+    <div class="container">
+      <header class="news__head">
+        <h2 class="section-title" data-reveal>Novedades</h2>
+        <div class="news__nav">
+          <button class="circle-btn" id="newsPrev" type="button" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" id="newsNext" type="button" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="slider" id="newsSlider">
+        <div class="slider__viewport">
+
+          <article class="slide is-active">
+            <a class="slide__media" href="novedad.html?id=politica-exterior-argentina-1983-2025" aria-label="Leer la novedad completa">
+              <img src="https://picsum.photos/seed/cerir-a/1200/900" alt="Mesa de debate en la Facultad de Ciencia Política" loading="lazy">
+            </a>
+            <div class="slide__body">
+              <span class="slide__tag">Seminario</span>
+              <h3 class="slide__title">Política exterior argentina: continuidades y rupturas 1983–2025</h3>
+              <p class="slide__text">
+                Cuatro encuentros abiertos con investigadores del CERIR y del CONICET para revisar
+                cuarenta años de inserción internacional argentina desde el retorno democrático.
+              </p>
+              <p class="slide__meta"><time datetime="2026-08-12">12 de agosto de 2026</time> · Aula Magna, FCPolit</p>
+              <a class="link-arrow" href="novedad.html?id=politica-exterior-argentina-1983-2025">Leer más
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="slide">
+            <a class="slide__media" href="novedad.html?id=politica-exterior-argentina-tomo-xii" aria-label="Leer la novedad completa">
+              <img src="https://picsum.photos/seed/cerir-b/1200/900" alt="Publicación institucional del CERIR" loading="lazy">
+            </a>
+            <div class="slide__body">
+              <span class="slide__tag">Publicación</span>
+              <h3 class="slide__title">La política exterior argentina, tomo XII: agenda multilateral</h3>
+              <p class="slide__text">
+                Nueva entrega de la serie histórica del CERIR. Diez capítulos sobre Mercosur,
+                Antártida, Malvinas, comercio y organismos internacionales.
+              </p>
+              <p class="slide__meta"><time datetime="2026-07-03">3 de julio de 2026</time> · UNR Editora</p>
+              <a class="link-arrow" href="novedad.html?id=politica-exterior-argentina-tomo-xii">Leer más
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="slide">
+            <a class="slide__media" href="novedad.html?id=becas-iniciacion-investigacion-2027" aria-label="Leer la novedad completa">
+              <img src="https://picsum.photos/seed/cerir-c/1200/900" alt="Jornada de investigación con becarios" loading="lazy">
+            </a>
+            <div class="slide__body">
+              <span class="slide__tag">Convocatoria</span>
+              <h3 class="slide__title">Becas de iniciación en investigación 2027</h3>
+              <p class="slide__text">
+                Abierta la inscripción para estudiantes avanzados de Relaciones Internacionales
+                interesados en integrarse a los proyectos acreditados del centro.
+              </p>
+              <p class="slide__meta"><time datetime="2026-06-18">18 de junio de 2026</time> · Secretaría de Ciencia y Técnica</p>
+              <a class="link-arrow" href="novedad.html?id=becas-iniciacion-investigacion-2027">Leer más
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="slide">
+            <a class="slide__media" href="novedad.html?id=xvi-congreso-nacional-relaciones-internacionales" aria-label="Leer la novedad completa">
+              <img src="https://picsum.photos/seed/cerir-d/1200/900" alt="Congreso internacional de relaciones internacionales" loading="lazy">
+            </a>
+            <div class="slide__body">
+              <span class="slide__tag">Congreso</span>
+              <h3 class="slide__title">XVI Congreso Nacional de Relaciones Internacionales</h3>
+              <p class="slide__text">
+                Rosario recibe a más de trescientos investigadores de América Latina para
+                discutir orden internacional, regionalismo y desarrollo.
+              </p>
+              <p class="slide__meta"><time datetime="2026-05-29">29 de mayo de 2026</time> · Centro Cultural Fontanarrosa</p>
+              <a class="link-arrow" href="novedad.html?id=xvi-congreso-nacional-relaciones-internacionales">Leer más
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="slider__foot">
+          <div class="slider__dots" id="newsDots" aria-label="Seleccionar novedad"></div>
+          <span class="slider__counter"><b id="newsCurrent">01</b> / <span id="newsTotal">04</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== SCROLL TEXT -->
+  <section class="manifesto" id="institucional">
+    <div class="container">
+      <p class="manifesto__kicker" data-reveal>Quiénes somos</p>
+      <div class="manifesto__text" id="manifestoText">
+        <p>El CERIR, fundado en 1987, está integrado por un conjunto de docentes de la Facultad de Ciencia Política y Relaciones Internacionales de la Universidad Nacional de Rosario e investigadores y becarios del Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET).</p>
+        <p>Los primeros antecedentes que hacen a la formación de este grupo datan de 1985, fecha en la cual se presentó al CONICET un proyecto de investigación que abordaba el tema de la elaboración de "Un modelo de política exterior argentina" —PROMOPEA.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== MIEMBROS / MARQUEE -->
+  <section class="members" id="miembros">
+    <div class="container">
+      <header class="members__head">
+        <h2 class="section-title" data-reveal>Miembros</h2>
+        <p class="members__lead" data-reveal>
+          Docentes, investigadores y becarios que integran los proyectos acreditados del centro.
+          Pasá el mouse sobre una tarjeta para detener la fila.
+        </p>
+      </header>
+    </div>
+
+    <div class="marquees" id="marquees">
+      <!-- Las filas se generan por JS desde assets/js/app.js (data: MEMBERS) -->
+    </div>
+  </section>
+
+  <!-- ========================================================== NEWSLETTER -->
+  <section class="newsletter" id="newsletter">
+    <div class="container">
+      <h2 class="newsletter__title" data-reveal>Suscribite a nuestro newsletter</h2>
+      <p class="newsletter__lead" data-reveal>Novedades, convocatorias y publicaciones del CERIR. Un envío por mes, sin ruido.</p>
+
+      <form class="newsletter__form" id="newsletterForm" novalidate data-reveal>
+        <label class="sr-only" for="email">Correo electrónico</label>
+        <input class="newsletter__input" type="email" id="email" name="email"
+               placeholder="tu@correo.com" autocomplete="email" required>
+        <button class="newsletter__submit" type="submit" aria-label="Suscribirme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <p class="newsletter__msg" id="newsletterMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================ FOOTER -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div class="footer__col footer__col--brand">
+        <a class="logo logo--inverted" href="#hero" aria-label="CERIR — inicio">
+          <!-- <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
+            <ellipse cx="20" cy="20" rx="7.5" ry="18" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".65"/>
+            <path d="M3 14h34M3 26h34M2 20h36" stroke="currentColor" stroke-width="1.4" opacity=".65"/>
+          </svg>
+          <span class="logo__text">CERIR</span> -->
+          <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
+        </a>
+        <p class="footer__about">
+          Centro de Estudios en Relaciones Internacionales de Rosario.<br>
+          Facultad de Ciencia Política y RR.II. — UNR.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Secciones</h3>
+        <ul class="footer__list">
+          <li><a href="institucional.html">Institucional</a></li>
+          <li><a href="#cifras">Investigación</a></li>
+          <li><a href="#novedades">Novedades</a></li>
+          <li><a href="#miembros">Miembros</a></li>
+          <li><a href="publicaciones.html">Publicaciones</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Redes</h3>
+        <ul class="footer__list footer__list--social">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X / Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Academia.edu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Contacto</h3>
+        <ul class="footer__list">
+          <li>Riobamba 250 bis</li>
+          <li>Rosario, Santa Fe, Argentina</li>
+          <li><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a></li>
+          <li><a href="tel:+543414802620">+54 341 480 2620</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottomInner">
+      <p>© <span id="year">2026</span> CERIR — Centro de Estudios en Relaciones Internacionales de Rosario. Todos los derechos reservados.</p>
+      <p class="footer__legal"><a href="#">Términos</a><a href="#">Privacidad</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/worldmap.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
