@@ -22,6 +22,14 @@
       <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
     </a>
 
+    <nav class="header__nav" aria-label="Navegación principal">
+      <a href="institucional.html">Institucional</a>
+      <a href="novedades.html#maestria">Maestría</a>
+      <a href="publicaciones.html">Publicaciones</a>
+      <a href="novedades.html">Novedades</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
     <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
       <span class="burger__label">Menú</span>
       <span class="burger__box" aria-hidden="true">
@@ -47,11 +55,11 @@
     <div class="nav__aside">
       <div class="nav__block">
         <h3 class="nav__blockTitle">Sede</h3>
-        <p>Riobamba 250 bis<br>Rosario, Santa Fe<br>Argentina</p>
+        <p>Maipú 1065, Piso 3, Of. 301<br>Rosario, Santa Fe<br>Argentina</p>
       </div>
       <div class="nav__block">
         <h3 class="nav__blockTitle">Contacto</h3>
-        <p><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a><br><a href="tel:+543414802620">+54 341 480 2620</a></p>
+        <p><a href="mailto:cerir@unr.edu.ar">cerir@unr.edu.ar</a><br><a href="tel:+543414802620">+54 341 480 2620</a></p>
       </div>
       <div class="nav__block">
         <h3 class="nav__blockTitle">Redes</h3>
@@ -65,79 +73,212 @@
 
 <main id="main">
 
-  <!-- ========================================================== DESTACADA -->
+  <!-- ========================================================== CABECERA -->
   <section class="pubs-hero">
     <div class="container">
       <header class="pubs-hero__head">
         <h1 class="pubs-hero__title" data-reveal>Publicaciones</h1>
         <p class="pubs-hero__lead" data-reveal>
-          La producción editorial del centro, disponible para descargar en PDF.
+          Las cuatro líneas editoriales del centro: revistas, libros y colecciones.
         </p>
       </header>
 
-      <p class="pubs-hero__kicker" data-reveal>
-        <span class="dot"></span> Última publicación
-      </p>
-
-      <article class="feature" id="pubFeature" data-reveal>
-        <a class="feature__media" id="fMedia" href="#" aria-label="Descargar la última publicación">
-          <img id="fCover" src="" alt="" width="900" height="1200">
-        </a>
-        <div class="feature__body">
-          <span class="chip" id="fCollection"></span>
-          <h2 class="feature__title" id="fTitle"></h2>
-          <p class="feature__desc" id="fDesc"></p>
-          <ul class="feature__meta" id="fMeta"></ul>
-          <a class="btn btn--accent" id="fDownload" href="#" download>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0 5-5m-5 5-5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-            Descargar PDF
-          </a>
-        </div>
-      </article>
+      <ul class="page-head__index" data-reveal>
+        <li><a href="#cupea">CUPEA</a></li>
+        <li><a href="#mici">Revista MICI</a></li>
+        <li><a href="#libros">Libros de autores</a></li>
+        <li><a href="#serie">Serie PEA</a></li>
+      </ul>
     </div>
   </section>
 
-  <!-- ========================================================== ANTERIORES -->
-  <section class="pubs-group" id="anteriores">
+  <!-- ========================================================== CUPEA -->
+  <section class="pubs-group" id="cupea" data-cat="cupea">
     <div class="container">
       <header class="pubs-group__head">
-        <h2 class="section-title" data-reveal>Publicaciones anteriores</h2>
+        <div>
+          <p class="pubs-hero__kicker" data-reveal><span class="dot"></span> Línea editorial</p>
+          <h2 class="section-title" data-reveal>CUPEA</h2>
+          <p class="pubs-hero__lead" data-reveal></p>
+        </div>
+        <a class="link-arrow" href="coleccion.html?cat=cupea">Ver más
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+      </header>
+
+      <article class="feature" data-reveal>
+        <a class="feature__media" href="#" aria-label="Ver la última edición de CUPEA">
+          <img src="" alt="" width="900" height="1200">
+        </a>
+        <div class="feature__body">
+          <span class="chip">Última edición</span>
+          <h3 class="feature__title"></h3>
+          <p class="feature__desc"></p>
+          <ul class="feature__meta"></ul>
+          <a class="btn btn--accent" href="#">
+            Ver publicación
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <div class="pubs-group__sub">
+        <h3 class="pubs-group__subtitle">Ediciones anteriores</h3>
         <div class="carousel__nav">
-          <button class="circle-btn" type="button" data-carousel-prev="prevPubs" aria-label="Anterior">
+          <button class="circle-btn" type="button" data-carousel-prev="cupeaPrev" aria-label="Anterior">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
           </button>
-          <button class="circle-btn" type="button" data-carousel-next="prevPubs" aria-label="Siguiente">
+          <button class="circle-btn" type="button" data-carousel-next="cupeaPrev" aria-label="Siguiente">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
           </button>
         </div>
-      </header>
-
-      <div class="carousel" data-carousel="prevPubs">
-        <ul class="carousel__track" id="pubsPrev" tabindex="0" role="region"
-            aria-label="Publicaciones anteriores"></ul>
+      </div>
+      <div class="carousel" data-carousel="cupeaPrev">
+        <ul class="carousel__track" tabindex="0" role="region" aria-label="Ediciones anteriores de CUPEA"></ul>
         <div class="carousel__bar" aria-hidden="true"><span></span></div>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================== COMPLEMENTARIAS -->
-  <section class="pubs-group pubs-group--alt" id="complementarias">
+  <!-- ========================================================== MICI -->
+  <section class="pubs-group pubs-group--alt" id="mici" data-cat="mici">
     <div class="container">
       <header class="pubs-group__head">
-        <h2 class="section-title" data-reveal>Publicaciones complementarias</h2>
+        <div>
+          <p class="pubs-hero__kicker" data-reveal><span class="dot"></span> Línea editorial</p>
+          <h2 class="section-title" data-reveal>Revista Integración y Cooperación Internacional</h2>
+          <p class="pubs-hero__lead" data-reveal></p>
+        </div>
+        <a class="link-arrow" href="coleccion.html?cat=mici">Ver más
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+      </header>
+
+      <article class="feature" data-reveal>
+        <a class="feature__media" href="#" aria-label="Ver el último número de la revista MICI">
+          <img src="" alt="" width="900" height="1200">
+        </a>
+        <div class="feature__body">
+          <span class="chip">Última edición</span>
+          <h3 class="feature__title"></h3>
+          <p class="feature__desc"></p>
+          <ul class="feature__meta"></ul>
+          <a class="btn btn--accent" href="#">
+            Ver publicación
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <div class="pubs-group__sub">
+        <h3 class="pubs-group__subtitle">Números anteriores</h3>
         <div class="carousel__nav">
-          <button class="circle-btn" type="button" data-carousel-prev="compPubs" aria-label="Anterior">
+          <button class="circle-btn" type="button" data-carousel-prev="miciPrev" aria-label="Anterior">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
           </button>
-          <button class="circle-btn" type="button" data-carousel-next="compPubs" aria-label="Siguiente">
+          <button class="circle-btn" type="button" data-carousel-next="miciPrev" aria-label="Siguiente">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
           </button>
         </div>
+      </div>
+      <div class="carousel" data-carousel="miciPrev">
+        <ul class="carousel__track" tabindex="0" role="region" aria-label="Números anteriores de la revista MICI"></ul>
+        <div class="carousel__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== LIBROS DE AUTORES -->
+  <section class="pubs-group" id="libros" data-cat="libros">
+    <div class="container">
+      <header class="pubs-group__head">
+        <div>
+          <p class="pubs-hero__kicker" data-reveal><span class="dot"></span> Línea editorial</p>
+          <h2 class="section-title" data-reveal>Libros de autores</h2>
+          <p class="pubs-hero__lead" data-reveal></p>
+        </div>
+        <a class="link-arrow" href="coleccion.html?cat=libros">Ver más
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
       </header>
 
-      <div class="carousel" data-carousel="compPubs">
-        <ul class="carousel__track" id="pubsComp" tabindex="0" role="region"
-            aria-label="Publicaciones complementarias"></ul>
+      <article class="feature" data-reveal>
+        <a class="feature__media" href="#" aria-label="Ver el último libro publicado">
+          <img src="" alt="" width="900" height="1200">
+        </a>
+        <div class="feature__body">
+          <span class="chip">Última edición</span>
+          <h3 class="feature__title"></h3>
+          <p class="feature__desc"></p>
+          <ul class="feature__meta"></ul>
+          <a class="btn btn--accent" href="#">
+            Ver publicación
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <div class="pubs-group__sub">
+        <h3 class="pubs-group__subtitle">Libros anteriores</h3>
+        <div class="carousel__nav">
+          <button class="circle-btn" type="button" data-carousel-prev="librosPrev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" type="button" data-carousel-next="librosPrev" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel" data-carousel="librosPrev">
+        <ul class="carousel__track" tabindex="0" role="region" aria-label="Libros anteriores"></ul>
+        <div class="carousel__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== SERIE POLÍTICA EXTERIOR ARGENTINA -->
+  <section class="pubs-group pubs-group--alt" id="serie" data-cat="serie">
+    <div class="container">
+      <header class="pubs-group__head">
+        <div>
+          <p class="pubs-hero__kicker" data-reveal><span class="dot"></span> Línea editorial</p>
+          <h2 class="section-title" data-reveal>Serie Política Exterior Argentina</h2>
+          <p class="pubs-hero__lead" data-reveal></p>
+        </div>
+        <a class="link-arrow" href="coleccion.html?cat=serie">Ver más
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+      </header>
+
+      <article class="feature" data-reveal>
+        <a class="feature__media" href="#" aria-label="Ver el último tomo de la serie">
+          <img src="" alt="" width="900" height="1200">
+        </a>
+        <div class="feature__body">
+          <span class="chip">Última edición</span>
+          <h3 class="feature__title"></h3>
+          <p class="feature__desc"></p>
+          <ul class="feature__meta"></ul>
+          <a class="btn btn--accent" href="#">
+            Ver publicación
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <div class="pubs-group__sub">
+        <h3 class="pubs-group__subtitle">Tomos anteriores</h3>
+        <div class="carousel__nav">
+          <button class="circle-btn" type="button" data-carousel-prev="seriePrev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" type="button" data-carousel-next="seriePrev" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel" data-carousel="seriePrev">
+        <ul class="carousel__track" tabindex="0" role="region" aria-label="Tomos anteriores de la serie"></ul>
         <div class="carousel__bar" aria-hidden="true"><span></span></div>
       </div>
     </div>
@@ -176,19 +317,16 @@
         <h3 class="footer__title">Redes</h3>
         <ul class="footer__list footer__list--social">
           <li><a href="#">Instagram</a></li>
-          <li><a href="#">X / Twitter</a></li>
           <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">Academia.edu</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h3 class="footer__title">Contacto</h3>
         <ul class="footer__list">
-          <li>Riobamba 250 bis</li>
+          <li>Maipú 1065, Piso 3, Of. 301</li>
           <li>Rosario, Santa Fe, Argentina</li>
-          <li><a href="mailto:cerir@fcpolit.unr.edu.ar">cerir@fcpolit.unr.edu.ar</a></li>
+          <li><a href="mailto:cerir@unr.edu.ar">cerir@unr.edu.ar</a></li>
           <li><a href="tel:+543414802620">+54 341 480 2620</a></li>
         </ul>
       </div>

@@ -413,6 +413,50 @@
   }
 
   /* ============================================================
+     8a2. Ejes de investigación: acordeón con los miembros de c/u
+     ============================================================ */
+  function initAxes() {
+    var list = $('#axesList');
+    var DATA = window.CERIR_DATA;
+    if (!list || !DATA || !DATA.researchAxes) return;
+
+    function memberCard(m) {
+      return '' +
+        '<a class="member member--plain" href="miembro.html?id=' + encodeURIComponent(m.id) + '">' +
+          '<span class="member__name">' + m.name + '</span>' +
+          '<span class="member__area">' + m.area + '</span>' +
+        '</a>';
+    }
+
+    list.innerHTML = DATA.researchAxes.map(function (axis, i) {
+      var members = axis.members.map(DATA.member).filter(Boolean);
+      var panelId = 'axisPanel' + i;
+      return '' +
+        '<li class="axis">' +
+          '<button class="axis__head" type="button" aria-expanded="false" aria-controls="' + panelId + '">' +
+            '<span class="axis__name">' + axis.name + '</span>' +
+            '<span class="axis__count">' + members.length + ' miembro' + (members.length === 1 ? '' : 's') + '</span>' +
+            '<svg class="axis__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>' +
+          '</button>' +
+          '<div class="axis__panel" id="' + panelId + '">' +
+            '<div class="axis__panelInner">' +
+              '<div class="axis__members">' + members.map(memberCard).join('') + '</div>' +
+            '</div>' +
+          '</div>' +
+        '</li>';
+    }).join('');
+
+    $$('.axis__head', list).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var axis = btn.closest('.axis');
+        var open = axis.classList.contains('is-open');
+        axis.classList.toggle('is-open', !open);
+        btn.setAttribute('aria-expanded', String(!open));
+      });
+    });
+  }
+
+  /* ============================================================
      8b. Carruseles genéricos (scroll-snap nativo)
      Se vinculan por nombre: [data-carousel="x"] con
      [data-carousel-prev="x"] / [data-carousel-next="x"].
@@ -693,6 +737,7 @@
     initSlider();
     initManifesto();
     initMarquees();
+    initAxes();
     initCarousels();
     initGallery();
     initNewsletter();

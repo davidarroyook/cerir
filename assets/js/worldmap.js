@@ -71,6 +71,9 @@
 
   /* Nodos de la red (el hub es Rosario, sede del CERIR) */
   var HUB = { lon: -60.65, lat: -32.95, name: 'Rosario' };
+  /* Centroide aproximado de la masa continental de Sudamérica (promedio
+     de los vértices de su contorno), usado para centrar el mapa */
+  var SA_CENTER = { lon: -63.5, lat: -18.9 };
   var NODES = [
     { lon: -47.9,  lat: -15.8 },  /* Brasilia   */
     { lon: -70.6,  lat: -33.4 },  /* Santiago   */
@@ -147,11 +150,18 @@
     this.canvas.height = Math.round(this.h * dpr);
     this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    /* Rectángulo del mapa: cubre el ancho, centrado con leve sesgo a la derecha */
-    this.mw = Math.max(this.w * 1.02, this.h * 1.75);
+    /* Rectángulo del mapa: tamaño proporcional al viewport, ampliado para
+       que el hemisferio sur tenga más presencia visual */
+    this.mw = Math.max(this.w * 2.5875, this.h * 4.6125);
     this.mh = this.mw * (LAT_TOP - LAT_BOTTOM) / 360;
-    this.mx = (this.w - this.mw) / 2 + (this.w > 900 ? this.w * 0.04 : 0);
-    this.my = (this.h - this.mh) / 2 - this.h * 0.03;
+
+    /* Sudamérica se fija al centro exacto del hero (en vez de centrar el
+       mapa en el meridiano de Greenwich). Como Rosario está dentro de ese
+       continente, el punto de animación sigue coincidiendo con la ciudad. */
+    var c0x = ((SA_CENTER.lon + 180) / 360) * this.mw;
+    var c0y = ((LAT_TOP - SA_CENTER.lat) / (LAT_TOP - LAT_BOTTOM)) * this.mh;
+    this.mx = this.w / 2 - c0x;
+    this.my = this.h / 2 - c0y;
 
     this.buildDots();
     this.buildLinks();
