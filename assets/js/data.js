@@ -14,7 +14,7 @@ window.CERIR_DATA = (function () {
     {
       id: 'anabella-busso', name: 'Anabella Busso', tag: 'Directora',
       role: 'Investigadora — CONICET', area: 'Política exterior argentina y relaciones con EE.UU.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 12 — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 12 — Maipú 1065',
       since: 1991, lines: ['Política exterior argentina', 'Relaciones hemisféricas', 'Democracia y agenda externa'],
       bio: ['Dirige el CERIR y coordina la serie histórica sobre política exterior argentina que el centro publica desde fines de los años ochenta. Su trabajo se concentra en la relación entre los procesos políticos internos y las decisiones de inserción internacional del país, con especial atención al vínculo bilateral con los Estados Unidos.',
             'Dicta seminarios de grado y posgrado en la Facultad de Ciencia Política y Relaciones Internacionales de la UNR y participa habitualmente en instancias de formación de becarios del centro.']
@@ -22,7 +22,7 @@ window.CERIR_DATA = (function () {
     {
       id: 'miryam-colacrai', name: 'Miryam Colacrai', tag: 'Titular',
       role: 'Investigadora — CONICET', area: 'Régimen antártico y política internacional polar.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 12 — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 12 — Maipú 1065',
       since: 1989, lines: ['Régimen antártico', 'Regímenes internacionales', 'Cooperación científica'],
       bio: ['Su línea de trabajo aborda el Tratado Antártico como caso de estudio sobre la construcción y la durabilidad de los regímenes internacionales, y el lugar que ocupan los países del hemisferio sur en esa arquitectura.',
             'Integra el centro desde sus primeros años y participa en la formación de tesistas sobre cooperación científica y espacios de gobernanza global.']
@@ -30,35 +30,35 @@ window.CERIR_DATA = (function () {
     {
       id: 'gladys-lechini', name: 'Gladys Lechini', tag: 'Titular',
       role: 'Profesora titular — UNR', area: 'Cooperación Sur-Sur y relaciones con África.',
-      degree: 'Doctorado en Ciencia Política', office: 'Oficina 8 — Riobamba 250 bis',
+      degree: 'Doctorado en Ciencia Política', office: 'Oficina 8 — Maipú 1065',
       since: 1990, lines: ['Relaciones Argentina–África', 'Cooperación Sur-Sur', 'Estudios africanos'],
       bio: ['Trabaja sobre los vínculos entre América Latina y África y sobre la cooperación Sur-Sur como categoría analítica y como práctica de política exterior. Impulsó la incorporación de los estudios africanos a la agenda de investigación y de enseñanza de la Facultad.']
     },
     {
       id: 'alejandro-simonoff', name: 'Alejandro Simonoff', tag: 'Adjunto',
       role: 'Investigador — UNR', area: 'Historia de la política exterior argentina.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 8 — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 8 — Maipú 1065',
       since: 1998, lines: ['Historia diplomática', 'Autonomía', 'Doctrinas de política exterior'],
       bio: ['Investiga las continuidades y rupturas de la política exterior argentina en el largo plazo, con foco en el modo en que las distintas tradiciones de pensamiento —autonomistas, realistas, liberales— se traducen en decisiones concretas.']
     },
     {
       id: 'gustavo-marini', name: 'Gustavo Marini', tag: 'Titular',
       role: 'Profesor — UNR', area: 'Teoría de las relaciones internacionales.',
-      degree: 'Magíster en Relaciones Internacionales', office: 'Oficina 5 — Riobamba 250 bis',
+      degree: 'Magíster en Relaciones Internacionales', office: 'Oficina 5 — Maipú 1065',
       since: 1994, lines: ['Teoría de las RR.II.', 'Epistemología', 'Orden internacional'],
       bio: ['Dicta los seminarios de teoría del centro y trabaja sobre los debates epistemológicos de la disciplina, en particular sobre cómo las categorías producidas en los centros académicos del norte se usan —y se tensionan— para leer la política internacional desde la periferia.']
     },
     {
       id: 'carla-morasso', name: 'Carla Morasso', tag: 'Adjunta',
       role: 'Investigadora — CONICET', area: 'Relaciones económicas internacionales y BRICS.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 10 — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 10 — Maipú 1065',
       since: 2008, lines: ['BRICS', 'Cooperación Sur-Sur', 'Recursos naturales'],
       bio: ['Estudia la inserción económica internacional de la Argentina y el papel de las potencias emergentes, con trabajos sobre el bloque BRICS, el financiamiento para el desarrollo y la disputa por los recursos naturales.']
     },
     {
       id: 'esteban-actis', name: 'Esteban Actis', tag: 'Adjunto',
       role: 'Investigador — UNR', area: 'Economía política internacional y potencias medias.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 10 — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 10 — Maipú 1065',
       since: 2011, lines: ['Economía política internacional', 'Potencias medias', 'Brasil'],
       bio: ['Su investigación cruza economía política internacional y política exterior comparada, con foco en el comportamiento de las potencias medias sudamericanas y en el impacto de la competencia entre grandes potencias sobre los márgenes de acción de la región.']
     },
@@ -66,21 +66,21 @@ window.CERIR_DATA = (function () {
     {
       id: 'maria-elena-lorenzini', name: 'María Elena Lorenzini', tag: 'Adjunta',
       role: 'Investigadora — CONICET', area: 'Política exterior de Chile y vínculos bilaterales.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 11 — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 11 — Maipú 1065',
       since: 2004, lines: ['Relaciones Argentina–Chile', 'Política exterior comparada', 'Integración'],
       bio: ['Trabaja sobre la política exterior chilena y sobre la relación bilateral con la Argentina, atendiendo a los mecanismos institucionales de la vecindad: integración física, acuerdos fronterizos y coordinación en foros regionales.']
     },
     {
       id: 'julieta-zelicovich', name: 'Julieta Zelicovich', tag: 'Adjunta',
       role: 'Investigadora — CONICET', area: 'Negociaciones comerciales y régimen multilateral.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 11 — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 11 — Maipú 1065',
       since: 2010, lines: ['OMC y comercio', 'Negociaciones internacionales', 'Mercosur'],
       bio: ['Investiga el régimen multilateral de comercio y las negociaciones en las que participa la Argentina, tanto en la Organización Mundial del Comercio como en los acuerdos del Mercosur con terceros socios.']
     },
     {
       id: 'gabriela-marchetti', name: 'Gabriela Marchetti', tag: 'JTP',
       role: 'Docente — UNR', area: 'Integración regional y Mercosur.',
-      degree: 'Magíster en Integración Regional', office: 'Oficina 5 — Riobamba 250 bis',
+      degree: 'Magíster en Integración Regional', office: 'Oficina 5 — Maipú 1065',
       since: 2007, lines: ['Mercosur', 'Integración regional', 'Instituciones'],
       bio: ['Acompaña las materias de integración regional y trabaja sobre el desarrollo institucional del Mercosur, sus instancias de participación social y las tensiones entre las agendas comercial y política del bloque.']
     },
@@ -94,14 +94,14 @@ window.CERIR_DATA = (function () {
     {
       id: 'ruben-paredes', name: 'Rubén Paredes', tag: 'Titular',
       role: 'Profesor — UNR', area: 'Medio Oriente y estudios de seguridad.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 7 — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 7 — Maipú 1065',
       since: 1996, lines: ['Medio Oriente', 'Estudios de seguridad', 'Conflictos armados'],
       bio: ['Coordina el área de Medio Oriente del centro y trabaja sobre los conflictos de la región, las dinámicas de seguridad regional y su lectura desde América Latina.']
     },
     {
       id: 'sabrina-olivera', name: 'Sabrina Olivera', tag: 'Becaria',
       role: 'Becaria doctoral', area: 'Diplomacia climática y agenda ambiental.',
-      degree: 'Doctorado en curso — Relaciones Internacionales', office: 'Sala de becarios — Riobamba 250 bis',
+      degree: 'Doctorado en curso — Relaciones Internacionales', office: 'Sala de becarios — Maipú 1065',
       since: 2021, lines: ['Diplomacia climática', 'Régimen ambiental', 'Negociaciones COP'],
       bio: ['Desarrolla su tesis doctoral sobre la participación argentina en las negociaciones climáticas multilaterales y sobre el modo en que los compromisos ambientales se articulan con la política exterior económica.']
     },
@@ -116,42 +116,42 @@ window.CERIR_DATA = (function () {
     {
       id: 'lucrecia-fernandez', name: 'Lucrecia Fernández', tag: 'Becaria',
       role: 'Becaria posdoctoral', area: 'Cooperación técnica y desarrollo internacional.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Sala de becarios — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Sala de becarios — Maipú 1065',
       since: 2019, lines: ['Cooperación internacional', 'Desarrollo', 'Cooperación triangular'],
       bio: ['Su investigación posdoctoral aborda la cooperación técnica argentina y los esquemas de cooperación triangular, con atención a los criterios que definen prioridades y socios.']
     },
     {
       id: 'marcelo-videtta', name: 'Marcelo Videtta', tag: 'JTP',
       role: 'Docente — UNR', area: 'Política exterior brasileña.',
-      degree: 'Magíster en Relaciones Internacionales', office: 'Oficina 7 — Riobamba 250 bis',
+      degree: 'Magíster en Relaciones Internacionales', office: 'Oficina 7 — Maipú 1065',
       since: 2009, lines: ['Brasil', 'Relaciones bilaterales', 'Política regional'],
       bio: ['Trabaja sobre la política exterior de Brasil y su impacto en la agenda regional, con foco en los ciclos de acercamiento y distanciamiento del vínculo bilateral con la Argentina.']
     },
     {
       id: 'natalia-ceppi', name: 'Natalia Ceppi', tag: 'Adjunta',
       role: 'Investigadora — CONICET', area: 'Recursos naturales y política internacional.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 9 — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 9 — Maipú 1065',
       since: 2009, lines: ['Recursos naturales', 'Bolivia y Paraguay', 'Energía'],
       bio: ['Investiga la dimensión internacional de los recursos naturales en América del Sur, con trabajos sobre hidrocarburos, energía y las relaciones de la Argentina con Bolivia y Paraguay.']
     },
     {
       id: 'paula-guerra', name: 'Paula Guerra', tag: 'Adjunta',
       role: 'Investigadora — UNR', area: 'Género y relaciones internacionales.',
-      degree: 'Doctorado en Ciencia Política', office: 'Oficina 9 — Riobamba 250 bis',
+      degree: 'Doctorado en Ciencia Política', office: 'Oficina 9 — Maipú 1065',
       since: 2013, lines: ['Género y RR.II.', 'Política exterior feminista', 'Derechos humanos'],
       bio: ['Coordina la línea de género del centro y trabaja sobre la incorporación de la perspectiva de género en la política exterior y en las agencias de cooperación, así como sobre los debates en torno a las políticas exteriores feministas.']
     },
     {
       id: 'diego-cannizzaro', name: 'Diego Cannizzaro', tag: 'Becario',
       role: 'Becario doctoral', area: 'Defensa y política de seguridad regional.',
-      degree: 'Doctorado en curso — Relaciones Internacionales', office: 'Sala de becarios — Riobamba 250 bis',
+      degree: 'Doctorado en curso — Relaciones Internacionales', office: 'Sala de becarios — Maipú 1065',
       since: 2022, lines: ['Política de defensa', 'Seguridad regional', 'Fuerzas armadas'],
       bio: ['Su tesis analiza la coordinación en materia de defensa entre los países del Cono Sur y las dificultades de sostener agendas comunes frente a ciclos políticos divergentes.']
     },
     {
       id: 'victoria-zapata', name: 'Victoria Zapata', tag: 'JTP',
       role: 'Docente — UNR', area: 'Migraciones internacionales y derechos humanos.',
-      degree: 'Magíster en Derechos Humanos', office: 'Oficina 6 — Riobamba 250 bis',
+      degree: 'Magíster en Derechos Humanos', office: 'Oficina 6 — Maipú 1065',
       since: 2012, lines: ['Migraciones', 'Derechos humanos', 'Políticas migratorias'],
       bio: ['Trabaja sobre movilidad humana en la región y sobre la relación entre las políticas migratorias nacionales y los compromisos internacionales en materia de derechos humanos.']
     },
@@ -166,42 +166,42 @@ window.CERIR_DATA = (function () {
     {
       id: 'camila-rios', name: 'Camila Ríos', tag: 'Becaria',
       role: 'Becaria doctoral', area: 'Multilateralismo y Naciones Unidas.',
-      degree: 'Doctorado en curso — Relaciones Internacionales', office: 'Sala de becarios — Riobamba 250 bis',
+      degree: 'Doctorado en curso — Relaciones Internacionales', office: 'Sala de becarios — Maipú 1065',
       since: 2023, lines: ['Naciones Unidas', 'Multilateralismo', 'Operaciones de paz'],
       bio: ['Investiga la participación argentina en el sistema de Naciones Unidas, con foco en las operaciones de mantenimiento de la paz y en las candidaturas a organismos multilaterales.']
     },
     {
       id: 'andres-lofiego', name: 'Andrés Lofiego', tag: 'JTP',
       role: 'Docente — UNR', area: 'Historia diplomática latinoamericana.',
-      degree: 'Magíster en Historia', office: 'Oficina 6 — Riobamba 250 bis',
+      degree: 'Magíster en Historia', office: 'Oficina 6 — Maipú 1065',
       since: 2011, lines: ['Historia diplomática', 'América Latina', 'Archivos'],
       bio: ['Acompaña las materias de historia de las relaciones internacionales y trabaja con fuentes de archivo sobre la diplomacia latinoamericana del siglo XX.']
     },
     {
       id: 'silvia-rosales', name: 'Silvia Rosales', tag: 'Titular',
       role: 'Profesora — UNR', area: 'Derecho internacional público.',
-      degree: 'Doctorado en Derecho', office: 'Oficina 4 — Riobamba 250 bis',
+      degree: 'Doctorado en Derecho', office: 'Oficina 4 — Maipú 1065',
       since: 1997, lines: ['Derecho internacional', 'Tratados', 'Solución de controversias'],
       bio: ['Aporta la dimensión jurídica a los proyectos del centro, con trabajos sobre derecho de los tratados y sobre los mecanismos de solución de controversias en los que interviene la Argentina.']
     },
     {
       id: 'martin-ruggiero', name: 'Martín Ruggiero', tag: 'Adjunto',
       role: 'Investigador — CONICET', area: 'Comercio agroindustrial y agenda global.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 10 — Riobamba 250 bis',
+      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 10 — Maipú 1065',
       since: 2014, lines: ['Comercio agroindustrial', 'Cadenas globales', 'Sostenibilidad'],
       bio: ['Analiza la inserción del complejo agroindustrial argentino en las cadenas globales de valor y el impacto de las nuevas exigencias ambientales de los mercados de destino.']
     },
     {
       id: 'florencia-vitali', name: 'Florencia Vitali', tag: 'Becaria',
       role: 'Becaria posdoctoral', area: 'Ciudades y paradiplomacia.',
-      degree: 'Doctorado en Ciencia Política', office: 'Sala de becarios — Riobamba 250 bis',
+      degree: 'Doctorado en Ciencia Política', office: 'Sala de becarios — Maipú 1065',
       since: 2020, lines: ['Paradiplomacia', 'Ciudades', 'Redes internacionales'],
       bio: ['Estudia la acción internacional de gobiernos locales y provincias, y el modo en que ciudades como Rosario construyen agendas propias en redes internacionales.']
     },
     {
       id: 'juan-pablo-sosa', name: 'Juan Pablo Sosa', tag: 'JTP',
       role: 'Docente — UNR', area: 'Integración energética sudamericana.',
-      degree: 'Magíster en Relaciones Internacionales', office: 'Oficina 4 — Riobamba 250 bis',
+      degree: 'Magíster en Relaciones Internacionales', office: 'Oficina 4 — Maipú 1065',
       since: 2015, lines: ['Energía', 'Integración física', 'Infraestructura'],
       bio: ['Trabaja sobre los proyectos de integración energética e infraestructura en América del Sur y sobre las condiciones políticas que explican sus avances y estancamientos.']
     },
@@ -211,6 +211,52 @@ window.CERIR_DATA = (function () {
       degree: 'Doctorado en Estudios Europeos', office: 'Investigadora asociada — sin oficina asignada',
       since: 2017, lines: ['Unión Europea', 'Mercosur–UE', 'Política comercial'],
       bio: ['Investiga la política externa de la Unión Europea y la larga negociación del acuerdo con el Mercosur, atendiendo tanto a los intereses comerciales como a las condicionalidades regulatorias.']
+    }
+  ];
+
+  /* -------------------------------------------------- Ejes de investigación
+     Agrupan a los miembros por área de trabajo (más amplios que el campo
+     `lines` de cada miembro, que es demasiado granular para armar grupos). */
+  var researchAxes = [
+    {
+      id: 'politica-exterior-argentina', name: 'Política exterior argentina e historia diplomática',
+      members: ['anabella-busso', 'alejandro-simonoff', 'andres-lofiego']
+    },
+    {
+      id: 'teoria-orden-internacional', name: 'Teoría y orden internacional',
+      members: ['gustavo-marini', 'federico-merke']
+    },
+    {
+      id: 'integracion-regional', name: 'Integración regional, Mercosur y paradiplomacia',
+      members: ['gabriela-marchetti', 'julieta-zelicovich', 'valeria-iglesias', 'florencia-vitali']
+    },
+    {
+      id: 'cooperacion-sur-sur', name: 'Cooperación internacional, Sur-Sur y gobernanza global',
+      members: ['gladys-lechini', 'carla-morasso', 'emanuel-porcelli', 'lucrecia-fernandez']
+    },
+    {
+      id: 'relaciones-bilaterales', name: 'Relaciones bilaterales: Brasil, Chile y potencias medias',
+      members: ['esteban-actis', 'marcelo-videtta', 'maria-elena-lorenzini']
+    },
+    {
+      id: 'seguridad-defensa', name: 'Seguridad, defensa y conflictos internacionales',
+      members: ['ruben-paredes', 'diego-cannizzaro', 'camila-rios']
+    },
+    {
+      id: 'recursos-naturales', name: 'Recursos naturales, energía y medio ambiente',
+      members: ['sabrina-olivera', 'natalia-ceppi', 'juan-pablo-sosa']
+    },
+    {
+      id: 'genero-migraciones', name: 'Género, migraciones y derechos humanos',
+      members: ['paula-guerra', 'victoria-zapata']
+    },
+    {
+      id: 'derecho-internacional', name: 'Derecho internacional y regímenes internacionales',
+      members: ['silvia-rosales', 'miryam-colacrai']
+    },
+    {
+      id: 'asia-pacifico', name: 'Asia-Pacífico, comercio exterior y cadenas globales',
+      members: ['hernan-fernandez', 'martin-ruggiero']
     }
   ];
 
@@ -347,7 +393,7 @@ window.CERIR_DATA = (function () {
       id: 'maestria-seminario-internacional-orden-global', group: 'maestria', tag: 'Seminario',
       title: 'Seminario internacional: el orden global en disputa',
       subtitle: 'Tres semanas intensivas con profesores invitados de Brasil, México y España.',
-      date: '2026-07-18', dateLabel: '18 de julio de 2026', place: 'Aula 3, Riobamba 250 bis',
+      date: '2026-07-18', dateLabel: '18 de julio de 2026', place: 'Aula 3, Maipú 1065',
       author: 'esteban-actis', image: 'https://picsum.photos/seed/cerir-m2/1600/900',
       imageAlt: 'Profesor invitado dando una clase de posgrado', tags: ['Posgrado', 'Orden internacional'],
       body: [
@@ -440,7 +486,7 @@ window.CERIR_DATA = (function () {
       id: 'graduados-taller-escritura-academica', group: 'graduados', tag: 'Taller',
       title: 'Taller de escritura académica para graduados',
       subtitle: 'Cuatro encuentros para convertir la tesis en un artículo publicable.',
-      date: '2026-03-19', dateLabel: '19 de marzo de 2026', place: 'Aula 5, Riobamba 250 bis',
+      date: '2026-03-19', dateLabel: '19 de marzo de 2026', place: 'Aula 5, Maipú 1065',
       author: 'julieta-zelicovich', image: 'https://picsum.photos/seed/cerir-gr4/1600/900',
       imageAlt: 'Taller de escritura académica en curso', tags: ['Graduados', 'Formación'],
       body: [
@@ -521,12 +567,103 @@ window.CERIR_DATA = (function () {
   ];
 
   /* -------------------------------------------------- Publicaciones
-     Dos taxonomías. `serie` es la colección principal: su primer
-     elemento es el último posteo y se muestra como card destacada.
-     Los PDF de assets/pdf/ son archivos de muestra de una página. */
+     Cuatro líneas editoriales del centro. En cada una, `items[0]` es
+     la última edición y se muestra como card destacada; el resto
+     alimenta el carrusel de "ediciones anteriores".
+     `kind: 'pdf'` → el ítem descarga assets/pdf/<id>.pdf (archivos de
+     muestra de una página). `kind: 'external'` (MICI) → el ítem no
+     tiene PDF propio: `externalUrl` apunta al Portal de Revistas UNR. */
+  var pubCategoryOrder = ['cupea', 'mici', 'libros', 'serie'];
+
   var publications = {
+    cupea: {
+      slug: 'cupea', name: 'CUPEA', kind: 'pdf',
+      lead: 'Revista semestral del CERIR. Desde el número 123 inicia su “nueva época”, con referato acreditado.',
+      items: [
+        {
+          id: 'cupea-126', year: 2026, number: 126, pages: 212, title: 'CUPEA N.º 126',
+          short: 'Dossier: disputas por los recursos estratégicos en el Atlántico Sur.',
+          desc: 'Número de la “nueva época” de CUPEA dedicado a las disputas por los recursos estratégicos en el Atlántico Sur, con artículos sobre pesca, minerales críticos y la proyección antártica argentina, más la sección habitual de reseñas bibliográficas.',
+          file: 'assets/pdf/cupea-126.pdf'
+        },
+        {
+          id: 'cupea-125', year: 2025, number: 125, pages: 204, title: 'CUPEA N.º 125',
+          short: 'Artículos sobre cooperación Sur-Sur, Mercosur y la agenda ambiental argentina.',
+          file: 'assets/pdf/cupea-125.pdf'
+        },
+        {
+          id: 'cupea-124', year: 2025, number: 124, pages: 196, title: 'CUPEA N.º 124',
+          short: 'Dossier sobre negociaciones comerciales y régimen multilateral de comercio.',
+          file: 'assets/pdf/cupea-124.pdf'
+        },
+        {
+          id: 'cupea-123', year: 2024, number: 123, pages: 188, title: 'CUPEA N.º 123',
+          short: 'Primer número de la “nueva época” de la revista, con referato acreditado.',
+          desc: 'Número inaugural de la “nueva época” de CUPEA: nuevo comité editorial, sistema de referato doble ciego y acreditación ante el sistema de indexación de revistas científicas, además del dossier sobre teoría de las relaciones internacionales desde la periferia.',
+          file: 'assets/pdf/cupea-123.pdf'
+        }
+      ]
+    },
+    mici: {
+      slug: 'mici', name: 'Revista Integración y Cooperación Internacional', kind: 'external',
+      siteUrl: 'https://revista-mici.unr.edu.ar/index.php/revistamici',
+      lead: 'Revista de la Maestría en Relaciones Internacionales, editada en el Portal de Revistas de la UNR.',
+      items: [
+        {
+          id: 'mici-v9n2', year: 2025, label: 'Vol. 9, N.º 2', title: 'Integración y Cooperación Internacional — vol. 9, n.º 2',
+          short: 'Artículos de tesistas de la Maestría sobre integración regional y cooperación internacional.',
+          externalUrl: 'https://revista-mici.unr.edu.ar/index.php/revistamici'
+        },
+        {
+          id: 'mici-v9n1', year: 2025, label: 'Vol. 9, N.º 1', title: 'Integración y Cooperación Internacional — vol. 9, n.º 1',
+          short: 'Dossier sobre cooperación Sur-Sur y organismos regionales.',
+          externalUrl: 'https://revista-mici.unr.edu.ar/index.php/revistamici'
+        },
+        {
+          id: 'mici-v8n2', year: 2024, label: 'Vol. 8, N.º 2', title: 'Integración y Cooperación Internacional — vol. 8, n.º 2',
+          short: 'Artículos sobre Mercosur, integración física y agendas fronterizas.',
+          externalUrl: 'https://revista-mici.unr.edu.ar/index.php/revistamici'
+        },
+        {
+          id: 'mici-v8n1', year: 2024, label: 'Vol. 8, N.º 1', title: 'Integración y Cooperación Internacional — vol. 8, n.º 1',
+          short: 'Número monográfico sobre teoría y métodos de la integración regional.',
+          externalUrl: 'https://revista-mici.unr.edu.ar/index.php/revistamici'
+        }
+      ]
+    },
+    libros: {
+      slug: 'libros', name: 'Libros de autores', kind: 'pdf',
+      lead: 'Libros individuales escritos por integrantes del CERIR.',
+      items: [
+        {
+          id: 'libros-busso-2024', year: 2024, pages: 264, title: 'Estados Unidos y América Latina en el nuevo tablero global',
+          short: 'Un recorrido por la relación hemisférica desde el fin de la Guerra Fría hasta la actualidad.',
+          author: 'anabella-busso',
+          file: 'assets/pdf/libros-busso-2024.pdf'
+        },
+        {
+          id: 'libros-simonoff-2022', year: 2022, pages: 312, title: 'Historia de la política exterior argentina. Tradiciones en disputa',
+          short: 'Las tradiciones autonomista, realista y liberal en la política exterior argentina del siglo XX.',
+          author: 'alejandro-simonoff',
+          file: 'assets/pdf/libros-simonoff-2022.pdf'
+        },
+        {
+          id: 'libros-lechini-2020', year: 2020, pages: 238, title: 'Sur-Sur. Argentina, África y la cooperación como política',
+          short: 'La cooperación Sur-Sur como categoría analítica y como práctica de política exterior.',
+          author: 'gladys-lechini',
+          file: 'assets/pdf/libros-lechini-2020.pdf'
+        },
+        {
+          id: 'libros-zelicovich-2019', year: 2019, pages: 196, title: 'La Argentina en la OMC. Veinticinco años de negociaciones comerciales',
+          short: 'Un balance de la participación argentina en el régimen multilateral de comercio.',
+          author: 'julieta-zelicovich',
+          file: 'assets/pdf/libros-zelicovich-2019.pdf'
+        }
+      ]
+    },
     serie: {
-      name: 'La política exterior argentina',
+      slug: 'serie', name: 'Serie Política Exterior Argentina', kind: 'pdf',
+      lead: 'La colección histórica del centro, publicada desde 1991.',
       items: [
         {
           id: 'pea-tomo-12', year: 2026, pages: 218, title: 'La política exterior argentina, tomo XII',
@@ -555,36 +692,6 @@ window.CERIR_DATA = (function () {
           file: 'assets/pdf/pea-tomo-08.pdf'
         }
       ]
-    },
-    complementarias: {
-      name: 'Publicaciones complementarias',
-      items: [
-        {
-          id: 'cuaderno-14', year: 2026, pages: 64, title: 'Cuadernos de Política Exterior N.º 14',
-          short: 'Diplomacia climática: la participación argentina en las negociaciones ambientales.',
-          file: 'assets/pdf/cuaderno-14.pdf'
-        },
-        {
-          id: 'dt-09', year: 2025, pages: 38, title: 'Documentos de Trabajo N.º 9',
-          short: 'Cooperación Sur-Sur: instrumentos, socios y criterios de asignación.',
-          file: 'assets/pdf/dt-09.pdf'
-        },
-        {
-          id: 'anuario-2025', year: 2025, pages: 142, title: 'Anuario de Relaciones Internacionales 2025',
-          short: 'Balance del año en la agenda externa argentina y regional.',
-          file: 'assets/pdf/anuario-2025.pdf'
-        },
-        {
-          id: 'dossier-antartida', year: 2024, pages: 88, title: 'Dossier Antártida',
-          short: '65 años del Tratado Antártico: régimen, ciencia y disputas pendientes.',
-          file: 'assets/pdf/dossier-antartida.pdf'
-        },
-        {
-          id: 'informe-mercosur-ue', year: 2024, pages: 52, title: 'Informe Mercosur — Unión Europea',
-          short: 'Estado de la negociación y escenarios de ratificación.',
-          file: 'assets/pdf/informe-mercosur-ue.pdf'
-        }
-      ]
     }
   };
 
@@ -596,6 +703,7 @@ window.CERIR_DATA = (function () {
 
   return {
     members: members,
+    researchAxes: researchAxes,
     news: news,
     newsGroups: newsGroups,
     /* posteos de una taxonomía, del más nuevo al más viejo */
@@ -604,9 +712,31 @@ window.CERIR_DATA = (function () {
                  .sort(function (a, b) { return a.date < b.date ? 1 : -1; });
     },
     publications: publications,
+    pubCategoryOrder: pubCategoryOrder,
+    pubCategory: function (slug) { return publications[slug] || null; },
+    /* busca un ítem por id en todas las categorías */
+    pubItem: function (id) {
+      for (var i = 0; i < pubCategoryOrder.length; i++) {
+        var cat = publications[pubCategoryOrder[i]];
+        var item = byId(cat.items, id);
+        if (item) return { item: item, category: cat };
+      }
+      return null;
+    },
     /* portada de muestra: reemplazar por la tapa real del PDF */
     cover: function (p) { return 'https://picsum.photos/seed/pub-' + p.id + '/900/1200'; },
     member: function (id) { return byId(members, id); },
+    /* otros miembros que comparten al menos un eje de investigación con `id` */
+    relatedMembers: function (id) {
+      var ids = [];
+      researchAxes.forEach(function (axis) {
+        if (axis.members.indexOf(id) === -1) return;
+        axis.members.forEach(function (mid) {
+          if (mid !== id && ids.indexOf(mid) === -1) ids.push(mid);
+        });
+      });
+      return ids.map(function (mid) { return byId(members, mid); }).filter(Boolean);
+    },
     article: function (id) { return byId(news, id); },
     initials: function (name) {
       return name.split(' ').slice(0, 2).map(function (p) { return p[0]; }).join('');

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Novedad — CERIR</title>
-<meta name="description" content="Novedades del Centro de Estudios en Relaciones Internacionales de Rosario.">
+<title>Publicación — CERIR</title>
+<meta name="description" content="Publicaciones del Centro de Estudios en Relaciones Internacionales de Rosario.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +19,6 @@
 <header class="header is-solid" id="header">
   <div class="header__inner">
     <a class="logo" href="index.html" aria-label="CERIR — inicio">
-      <!-- <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
-        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
-        <ellipse cx="20" cy="20" rx="7.5" ry="18" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".65"/>
-        <path d="M3 14h34M3 26h34M2 20h36" stroke="currentColor" stroke-width="1.4" opacity=".65"/>
-      </svg>
-      <span class="logo__text">CERIR</span> -->
       <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
     </a>
 
@@ -78,83 +72,61 @@
 </nav>
 
 <main id="main">
-  <article class="article">
 
-    <!-- ======================================================== CABECERA -->
-    <header class="article__head">
-      <div class="container">
-        <a class="back-link" href="index.html#novedades">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6-6m-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-          Novedades
-        </a>
+  <!-- ========================================================== FICHA -->
+  <section class="pubs-hero">
+    <div class="container">
+      <a class="back-link" id="pubBack" href="publicaciones.html">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m0 0 6-6m-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        <span id="pubBackLabel">Publicaciones</span>
+      </a>
 
-        <ul class="chips chips--light" id="aTags" data-reveal></ul>
-        <h1 class="article__title" id="aTitle" data-reveal></h1>
-        <p class="article__subtitle" id="aSubtitle" data-reveal></p>
-
-        <div class="article__meta" data-reveal>
-          <a class="byline" id="aAuthor" href="#">
-            <span class="byline__avatar" id="aAuthorAvatar" aria-hidden="true"></span>
-            <span class="byline__text">
-              <span class="byline__name" id="aAuthorName"></span>
-              <span class="byline__role" id="aAuthorRole"></span>
-            </span>
+      <article class="feature" id="pubFeature" data-reveal>
+        <span class="feature__media" aria-hidden="true">
+          <img id="pubCover" src="" alt="" width="900" height="1200">
+        </span>
+        <div class="feature__body">
+          <span class="chip" id="pubCategory"></span>
+          <h1 class="feature__title" id="pubTitle"></h1>
+          <p class="feature__desc" id="pubShort"></p>
+          <ul class="feature__meta" id="pubMeta"></ul>
+          <a class="btn btn--accent" id="pubAction" href="#">
+            <span id="pubActionIcon" aria-hidden="true"></span>
+            <span id="pubActionLabel"></span>
           </a>
-          <ul class="article__metaList">
-            <li><time id="aDate" datetime=""></time></li>
-            <li id="aReadTime"></li>
-            <li id="aPlace"></li>
-          </ul>
         </div>
-      </div>
-    </header>
-
-    <!-- ======================================================== PORTADA -->
-    <figure class="article__cover">
-      <div class="container">
-        <img id="aImage" src="" alt="" width="1600" height="900">
-      </div>
-    </figure>
-
-    <!-- ======================================================== CONTENIDO -->
-    <div class="article__bodyWrap">
-      <div class="container">
-        <div class="prose prose--article" id="aBody"></div>
-
-        <div class="article__foot">
-          <ul class="chips" id="aTagsFoot"></ul>
-          <div class="share">
-            <span class="share__label">Compartir</span>
-            <a href="#" aria-label="Compartir en X">X</a>
-            <a href="#" aria-label="Compartir en LinkedIn">in</a>
-            <a href="#" aria-label="Compartir por correo">@</a>
-          </div>
-        </div>
-
-        <aside class="author-card" id="aAuthorCard">
-          <span class="author-card__avatar" id="acAvatar" aria-hidden="true"></span>
-          <div>
-            <span class="author-card__label">Escrito por</span>
-            <h2 class="author-card__name" id="acName"></h2>
-            <p class="author-card__role" id="acRole"></p>
-            <p class="author-card__bio" id="acBio"></p>
-            <a class="link-arrow" id="acLink" href="#">Ver perfil
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-            </a>
-          </div>
-        </aside>
-      </div>
+      </article>
     </div>
+  </section>
 
-    <!-- ======================================================== RELACIONADAS -->
-    <section class="more">
-      <div class="container">
-        <h2 class="more__title" data-reveal>Seguir leyendo</h2>
-        <div class="more__grid" id="aMore"></div>
-      </div>
-    </section>
+  <!-- ========================================================== CONTENIDO -->
+  <section class="block">
+    <div class="container">
+      <div class="prose prose--article" id="pubBody"></div>
 
-  </article>
+      <aside class="author-card" id="pubAuthorCard">
+        <span class="author-card__avatar" id="acAvatar" aria-hidden="true"></span>
+        <div>
+          <span class="author-card__label">Autor o autora</span>
+          <h2 class="author-card__name" id="acName"></h2>
+          <p class="author-card__role" id="acRole"></p>
+          <p class="author-card__bio" id="acBio"></p>
+          <a class="link-arrow" id="acLink" href="#">Ver perfil
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========================================================== RELACIONADAS -->
+  <section class="more">
+    <div class="container">
+      <h2 class="more__title" data-reveal>Más de esta colección</h2>
+      <div class="more__grid" id="pubMore"></div>
+    </div>
+  </section>
+
 </main>
 
 <!-- ============================================================ FOOTER -->
@@ -164,12 +136,6 @@
 
       <div class="footer__col footer__col--brand">
         <a class="logo logo--inverted" href="index.html" aria-label="CERIR — inicio">
-          <!-- <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
-            <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/>
-            <ellipse cx="20" cy="20" rx="7.5" ry="18" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".65"/>
-            <path d="M3 14h34M3 26h34M2 20h36" stroke="currentColor" stroke-width="1.4" opacity=".65"/>
-          </svg>
-          <span class="logo__text">CERIR</span> -->
           <img src="assets/img/cerir.png" alt="Cerir — Centro de Estudios en Relaciones Internacionales de Rosario" class="logo__img">
         </a>
         <p class="footer__about">

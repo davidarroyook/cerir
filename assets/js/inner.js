@@ -81,10 +81,17 @@
 
     $('#pBio').innerHTML = m.bio.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('');
 
-    /* anterior / siguiente, con vuelta al principio */
-    var i = members.indexOf(m);
-    pager('#pPrev', members[(i - 1 + members.length) % members.length]);
-    pager('#pNext', members[(i + 1) % members.length]);
+    /* Miembros similares: sólo si tiene alguno */
+    var related = DATA.relatedMembers(m.id);
+    var relatedSection = $('#relatedSection');
+    if (relatedSection) {
+      if (related.length) {
+        $('#relatedTrack').innerHTML = related.map(relatedMemberCard).join('');
+        relatedSection.hidden = false;
+      } else {
+        relatedSection.hidden = true;
+      }
+    }
 
     setMeta(m.name + ' — CERIR', m.name + ', ' + m.role + '. ' + m.area);
   }
@@ -93,10 +100,62 @@
     return m.id.replace(/-/g, '.') + '@cerir.unr.edu.ar';
   }
 
-  function pager(sel, m) {
-    var el = $(sel);
-    el.href = 'miembro.html?id=' + encodeURIComponent(m.id);
-    $('.pager__name', el).textContent = m.name;
+  function relatedMemberCard(m) {
+    return '' +
+      '<li class="related-member">' +
+        '<a class="member" href="miembro.html?id=' + encodeURIComponent(m.id) + '">' +
+          '<span class="member__top">' +
+            '<span class="member__avatar" aria-hidden="true">' + esc(DATA.initials(m.name)) + '</span>' +
+            '<span>' +
+              '<span class="member__name">' + esc(m.name) + '</span>' +
+              '<span class="member__role">' + esc(m.role) + '</span>' +
+            '</span>' +
+          '</span>' +
+          '<span class="member__area">' + esc(m.area) + '</span>' +
+        '</a>' +
+      '</li>';
+  }
+
+  /* ============================================================
+     Índice de miembros (indice.html): todos, A-Z por apellido
+     ============================================================ */
+  function surname(name) {
+    var parts = name.trim().split(' ');
+    return parts[parts.length - 1];
+  }
+  function firstNames(name) {
+    var parts = name.trim().split(' ');
+    return parts.slice(0, -1).join(' ');
+  }
+
+  function renderMemberIndex() {
+    var members = DATA.members.slice().sort(function (a, b) {
+      return surname(a.name).localeCompare(surname(b.name), 'es');
+    });
+
+    var order = [];
+    var groups = {};
+    members.forEach(function (m) {
+      var letter = surname(m.name).charAt(0).toUpperCase();
+      if (!groups[letter]) { groups[letter] = []; order.push(letter); }
+      groups[letter].push(m);
+    });
+
+    $('#indexList').innerHTML = order.map(function (letter) {
+      return '' +
+        '<div class="index-group">' +
+          '<h2 class="index-group__letter">' + letter + '</h2>' +
+          '<ul class="index-list">' +
+            groups[letter].map(function (m) {
+              return '' +
+                '<li><a href="miembro.html?id=' + encodeURIComponent(m.id) + '">' +
+                  '<span class="index-list__name">' + esc(surname(m.name)) + ', ' + esc(firstNames(m.name)) + '</span>' +
+                  '<span class="index-list__role">' + esc(m.role) + '</span>' +
+                '</a></li>';
+            }).join('') +
+          '</ul>' +
+        '</div>';
+    }).join('');
   }
 
   /* ============================================================
@@ -129,18 +188,11 @@
     var author = DATA.member(a.author);
     if (author) {
       var href = 'miembro.html?id=' + encodeURIComponent(author.id);
-      var pic = avatar(author, '');
-
       $('#aAuthor').href = href;
-      $('#aAuthorAvatar').innerHTML = pic;
+      $('#aAuthorAvatar').innerHTML = avatar(author, '');
       $('#aAuthorName').textContent = author.name;
       $('#aAuthorRole').textContent = author.role;
-
-      $('#acAvatar').innerHTML = pic;
-      $('#acName').textContent = author.name;
-      $('#acRole').textContent = author.role;
-      $('#acBio').textContent = author.bio[0];
-      $('#acLink').href = href;
+      fillAuthorCard(author);
     } else {
       $('#aAuthorCard').remove();
     }
@@ -181,57 +233,162 @@
   }
 
   /* ============================================================
-     Página de publicaciones
+     Publicaciones: página general (4 colecciones), ficha de un
+     ítem (publicacion.html) y colección completa (coleccion.html)
      ============================================================ */
   var DOWNLOAD_ICON =
     '<svg viewBox="0 0 24 24" aria-hidden="true">' +
       '<path d="M12 4v11m0 0 5-5m-5 5-5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="1.8"/>' +
     '</svg>';
+  var ARROW_ICON =
+    '<svg viewBox="0 0 24 24" aria-hidden="true">' +
+      '<path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/>' +
+    '</svg>';
 
-  function renderPublications() {
-    var P = DATA.publications;
-    if (!P) return;
-
-    /* --- destacada: el último posteo de la colección principal --- */
-    var f = P.serie.items[0];
-    var fileName = 'cerir-' + f.id + '.pdf';
-
-    $('#fCover').src = DATA.cover(f);
-    $('#fCover').alt = 'Tapa de ' + f.title;
-    $('#fCollection').textContent = P.serie.name;
-    $('#fTitle').textContent = f.title;
-    $('#fDesc').textContent = f.desc || f.short;
-    $('#fMeta').innerHTML = metaItems(f);
-
-    ['#fMedia', '#fDownload'].forEach(function (sel) {
-      var el = $(sel);
-      el.href = f.file;
-      el.setAttribute('download', fileName);
-    });
-
-    /* --- carruseles --- */
-    $('#pubsPrev').innerHTML = P.serie.items.slice(1).map(pubCard).join('');
-    $('#pubsComp').innerHTML = P.complementarias.items.map(pubCard).join('');
+  /* ítems de meta (año, páginas/etiqueta, autor) según el tipo de colección */
+  function pubMetaItems(p, cat) {
+    var vals = [];
+    if (cat.kind === 'external') {
+      if (p.label) vals.push(p.label);
+      vals.push(p.year);
+      vals.push('Acceso abierto');
+    } else {
+      vals.push(p.year);
+      if (p.pages) vals.push(p.pages + ' páginas');
+      var m = p.author ? DATA.member(p.author) : null;
+      if (m) vals.push(m.name);
+    }
+    return vals.map(function (v) { return '<li>' + esc(v) + '</li>'; }).join('');
   }
 
-  function metaItems(p) {
-    return [p.year, p.pages + ' páginas', 'PDF'].map(function (v) {
-      return '<li>' + esc(v) + '</li>';
-    }).join('');
+  function pubCardMeta(p, cat) {
+    var bits = cat.kind === 'external' && p.label ? [p.label, p.year] : [p.year];
+    if (cat.kind !== 'external' && p.pages) bits.push(p.pages + ' páginas');
+    return bits.map(esc).join(' · ');
   }
 
-  function pubCard(p) {
-    var name = 'cerir-' + p.id + '.pdf';
+  /* acción principal de un ítem: descargar el PDF o ir al sitio externo */
+  function pubAction(p, cat) {
+    if (cat.kind === 'external') {
+      return { href: p.externalUrl || cat.siteUrl, external: true, label: 'Ver en el sitio de la revista', icon: ARROW_ICON };
+    }
+    return { href: p.file, external: false, download: 'cerir-' + p.id + '.pdf', label: 'Descargar PDF', icon: DOWNLOAD_ICON };
+  }
+
+  function pubCard(p, cat) {
+    var href = 'publicacion.html?id=' + encodeURIComponent(p.id);
     return '' +
       '<li class="pub-card">' +
-        '<span class="pub-card__badge" aria-hidden="true">PDF</span>' +
-        '<span class="pub-card__meta">' + esc(p.year) + ' · ' + esc(p.pages) + ' páginas</span>' +
-        '<h3 class="pub-card__title">' + esc(p.title) + '</h3>' +
-        '<p class="pub-card__desc">' + esc(p.short) + '</p>' +
-        '<a class="btn btn--dark btn--sm" href="' + p.file + '" download="' + name + '">' +
-          DOWNLOAD_ICON + 'Descargar' +
+        '<a class="pub-card__link" href="' + href + '">' +
+          '<span class="pub-card__media">' +
+            '<img src="' + DATA.cover(p) + '" alt="" loading="lazy" width="900" height="1200">' +
+            '<span class="pub-card__badge" aria-hidden="true">' + (cat.kind === 'external' ? 'WEB' : 'PDF') + '</span>' +
+          '</span>' +
+          '<span class="pub-card__meta">' + pubCardMeta(p, cat) + '</span>' +
+          '<h3 class="pub-card__title">' + esc(p.title) + '</h3>' +
+          '<p class="pub-card__desc">' + esc(p.short) + '</p>' +
+          '<span class="pub-card__more">Ver detalle' + ARROW_ICON + '</span>' +
         '</a>' +
       '</li>';
+  }
+
+  function morePub(p, cat) {
+    return '' +
+      '<a class="more__card" href="publicacion.html?id=' + encodeURIComponent(p.id) + '">' +
+        '<span class="more__media"><img src="' + DATA.cover(p) + '" alt="" loading="lazy" width="900" height="1200"></span>' +
+        '<span class="more__tag">' + esc(cat.name) + '</span>' +
+        '<span class="more__cardTitle">' + esc(p.title) + '</span>' +
+      '</a>';
+  }
+
+  /* ficha de autor compartida por novedad.html y publicacion.html (ids #ac*) */
+  function fillAuthorCard(member) {
+    var href = 'miembro.html?id=' + encodeURIComponent(member.id);
+    var pic = avatar(member, '');
+    $('#acAvatar').innerHTML = pic;
+    $('#acName').textContent = member.name;
+    $('#acRole').textContent = member.role;
+    $('#acBio').textContent = member.bio[0];
+    $('#acLink').href = href;
+  }
+
+  /* --- publicaciones.html: las 4 colecciones, cada una con su
+     última edición destacada y un carrusel de ediciones anteriores --- */
+  function renderPublicationsOverview() {
+    DATA.pubCategoryOrder.forEach(function (slug) {
+      var root = document.querySelector('[data-cat="' + slug + '"]');
+      var cat = DATA.pubCategory(slug);
+      if (!root || !cat) return;
+
+      $('.pubs-hero__lead', root).textContent = cat.lead;
+
+      var f = cat.items[0];
+      var detailHref = 'publicacion.html?id=' + encodeURIComponent(f.id);
+
+      var media = $('.feature__media', root);
+      media.href = detailHref;
+      $('img', media).src = DATA.cover(f);
+      $('img', media).alt = 'Tapa de ' + f.title;
+
+      $('.feature__title', root).textContent = f.title;
+      $('.feature__desc', root).textContent = f.desc || f.short;
+      $('.feature__meta', root).innerHTML = pubMetaItems(f, cat);
+      $('.feature__body .btn', root).href = detailHref;
+
+      $('.carousel__track', root).innerHTML = cat.items.slice(1).map(function (p) {
+        return pubCard(p, cat);
+      }).join('');
+    });
+  }
+
+  /* --- publicacion.html: ficha de un único ítem, resuelto por ?id= --- */
+  function renderPublicationDetail() {
+    var found = DATA.pubItem(param('id'));
+    if (!found) { notFound('esa publicación', 'publicaciones.html', 'Ver todas las publicaciones'); return; }
+
+    var p = found.item, cat = found.category;
+
+    $('#pubBack').href = 'publicaciones.html#' + cat.slug;
+    $('#pubBackLabel').textContent = cat.name;
+
+    $('#pubCategory').textContent = cat.name;
+    $('#pubTitle').textContent = p.title;
+    $('#pubShort').textContent = p.short;
+    $('#pubMeta').innerHTML = pubMetaItems(p, cat);
+    $('#pubCover').src = DATA.cover(p);
+    $('#pubCover').alt = 'Tapa de ' + p.title;
+    $('#pubBody').innerHTML = '<p>' + esc(p.desc || p.short) + '</p>';
+
+    var action = pubAction(p, cat);
+    var actionEl = $('#pubAction');
+    actionEl.href = action.href;
+    if (action.download) actionEl.setAttribute('download', action.download);
+    else actionEl.removeAttribute('download');
+    if (action.external) { actionEl.target = '_blank'; actionEl.rel = 'noopener'; }
+    $('#pubActionIcon').innerHTML = action.icon;
+    $('#pubActionLabel').textContent = action.label;
+
+    var member = p.author ? DATA.member(p.author) : null;
+    if (member) fillAuthorCard(member);
+    else $('#pubAuthorCard').remove();
+
+    $('#pubMore').innerHTML = cat.items.filter(function (o) { return o.id !== p.id; })
+      .slice(0, 3).map(function (o) { return morePub(o, cat); }).join('');
+
+    setMeta(p.title + ' — CERIR', p.short);
+  }
+
+  /* --- coleccion.html: todos los ítems de una colección, resuelta por ?cat= --- */
+  function renderPublicationCollection() {
+    var cat = DATA.pubCategory(param('cat'));
+    if (!cat) { notFound('esa colección', 'publicaciones.html', 'Ver todas las publicaciones'); return; }
+
+    $('#colBack').href = 'publicaciones.html#' + cat.slug;
+    $('#colTitle').textContent = cat.name;
+    $('#colLead').textContent = cat.lead;
+    $('#colGrid').innerHTML = cat.items.map(function (p) { return pubCard(p, cat); }).join('');
+
+    setMeta(cat.name + ' — CERIR', cat.lead);
   }
 
   /* ============================================================
@@ -281,7 +438,10 @@
   function boot() {
     if ($('#profile')) renderMember();
     else if ($('.article')) renderArticle();
-    else if ($('#pubFeature')) renderPublications();
+    else if ($('#pubTitle')) renderPublicationDetail();
+    else if ($('#colGrid')) renderPublicationCollection();
+    else if ($('[data-cat]')) renderPublicationsOverview();
+    else if ($('#indexList')) renderMemberIndex();
     else if ($('#postsMaestria')) renderNovedades();
   }
 
