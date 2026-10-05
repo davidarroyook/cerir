@@ -1581,6 +1581,180 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--ink);
 }
 
+/* equipo */
+.team-section { padding: clamp(50px, 8vw, 100px) 0; background: var(--paper); }
+.team-section__head {
+  display: grid; gap: 18px;
+  margin-bottom: clamp(36px, 5vw, 64px);
+}
+@media (min-width: 900px) {
+  .team-section__head { grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; }
+}
+.team-section__lead { color: var(--muted); max-width: 46ch; }
+
+.roster { display: grid; grid-template-columns: 1fr; }
+@media (min-width: 760px) {
+  .roster { grid-template-columns: 1fr 1fr; column-gap: clamp(32px, 4vw, 64px); }
+}
+.roster__item {
+  padding: clamp(18px, 2vw, 24px) 0;
+  border-top: 1px solid var(--line);
+}
+.roster__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: -.01em;
+  color: var(--ink);
+}
+.roster__degree {
+  margin-top: 3px;
+  font-size: .8rem; font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--accent);
+}
+.roster__area {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.55;
+}
+.roster__area strong { color: var(--ink); font-weight: 600; }
+.roster__contact { margin-top: 8px; font-size: .86rem; }
+.roster__contact a { color: var(--ink); border-bottom: 1px solid var(--line); }
+.roster__contact a:hover { border-color: var(--ink); }
+
+.team-sub { margin-top: clamp(44px, 5vw, 72px); }
+.team-sub__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  letter-spacing: -.02em;
+  margin-bottom: clamp(14px, 2vw, 22px);
+}
+.team-sub__list { display: grid; }
+.team-sub__list--grid { }
+@media (min-width: 700px) {
+  .team-sub__list--grid { grid-template-columns: 1fr 1fr; column-gap: clamp(24px, 3vw, 48px); }
+}
+.team-sub__list li {
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.5;
+}
+.team-sub__list li strong { color: var(--ink); font-weight: 600; }
+
+/* maestría — revista */
+.journal-head { max-width: 72ch; margin-bottom: clamp(32px, 4vw, 48px); }
+.journal-head__lead { margin-top: 18px; color: var(--muted); max-width: 64ch; }
+.journal-head__actions { margin: clamp(24px, 3vw, 36px) 0 clamp(12px, 2vw, 20px); }
+
+/* maestría — intro */
+.intro-lead { margin-bottom: clamp(32px, 4vw, 48px); }
+
+.info-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(16px, 2vw, 24px);
+  max-width: 78ch;
+}
+@media (min-width: 700px) {
+  .info-boxes { grid-template-columns: 1fr 1fr; }
+}
+.info-box {
+  padding: clamp(20px, 2.6vw, 28px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.info-box__label {
+  display: block;
+  font-size: .72rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.info-box__text {
+  color: var(--ink);
+  font-size: .98rem;
+  line-height: 1.6;
+}
+.info-box__text a { border-bottom: 1px solid var(--line); }
+.info-box__text a:hover { border-color: var(--ink); }
+
+/* maestría — acordeón */
+.accordion { border-top: 1px solid var(--line); max-width: 78ch; }
+.accordion__item { border-bottom: 1px solid var(--line); }
+.accordion__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: clamp(20px, 2.6vw, 30px) 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.1rem, 1.9vw, 1.45rem);
+  letter-spacing: -.02em;
+  color: var(--ink);
+}
+.accordion__item summary::-webkit-details-marker { display: none; }
+.accordion__item summary::marker { content: ''; }
+.accordion__icon {
+  flex: none;
+  width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink);
+  transition: transform .3s var(--ease), background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+}
+.accordion__icon svg { width: 14px; height: 14px; }
+.accordion__item[open] .accordion__icon {
+  transform: rotate(45deg);
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+.accordion__body { padding: 0 0 clamp(26px, 3.4vw, 40px); }
+
+.plan-years {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 3vw, 40px);
+}
+@media (min-width: 700px) {
+  .plan-years { grid-template-columns: 1fr 1fr; }
+}
+.plan-years__col h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: -.02em;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.plan-list { counter-reset: plan; display: grid; gap: 2px; }
+.plan-list li {
+  counter-increment: plan;
+  position: relative;
+  padding: 10px 0 10px 36px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.45;
+}
+.plan-list li::before {
+  content: counter(plan, decimal-leading-zero);
+  position: absolute; left: 0; top: 10px;
+  font-family: var(--font-display);
+  font-size: .78rem; font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--ink);
+}
+
 /* ---------------------------------------------- 19. Galería + lightbox */
 .gallery-section { padding: clamp(60px, 9vw, 120px) 0; background: var(--paper); }
 .gallery-section__head {
