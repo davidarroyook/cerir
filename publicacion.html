@@ -25,7 +25,17 @@
     <nav class="header__nav" aria-label="Navegación principal">
       <a href="institucional.html">Institucional</a>
       <a href="maestria.html">Maestría</a>
-      <a href="publicaciones.html">Publicaciones</a>
+      <div class="nav-dropdown">
+        <a href="publicaciones.html" class="nav-dropdown__trigger" aria-haspopup="true">
+          Publicaciones
+          <svg class="nav-dropdown__caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+        <ul class="nav-dropdown__menu">
+          <li><a href="cupea.html">CUPEA</a></li>
+          <li><a href="maestria.html#maestria-revista">MICI</a></li>
+          <li><a href="publicaciones.html">Ver todo</a></li>
+        </ul>
+      </div>
       <a href="novedades.html">Novedades</a>
       <a href="contacto.html">Contacto</a>
     </nav>
@@ -47,7 +57,21 @@
     <ul class="nav__list">
       <li class="nav__item"><a href="#hero"><span class="nav__idx">01</span> Inicio</a></li>
       <li class="nav__item"><a href="institucional.html"><span class="nav__idx">02</span> Institucional</a></li>
-      <li class="nav__item"><a href="publicaciones.html"><span class="nav__idx">03</span> Publicaciones</a></li>
+      <li class="nav__item nav__item--dropdown">
+        <div class="nav__itemRow">
+          <a href="publicaciones.html"><span class="nav__idx">03</span> Publicaciones</a>
+          <button type="button" class="nav__subToggle" aria-expanded="false" aria-controls="navSubPublicaciones" aria-label="Mostrar subsecciones de Publicaciones">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </li>
+      <li class="nav__sub" id="navSubPublicaciones">
+        <ul>
+          <li><a href="cupea.html">CUPEA</a></li>
+          <li><a href="maestria.html#maestria-revista">MICI</a></li>
+          <li><a href="publicaciones.html">Ver todo</a></li>
+        </ul>
+      </li>
       <li class="nav__item"><a href="novedades.html"><span class="nav__idx">04</span> Novedades</a></li>
       <li class="nav__item"><a href="contacto.html"><span class="nav__idx">05</span> Contacto</a></li>
     </ul>
