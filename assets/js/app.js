@@ -89,6 +89,14 @@
       header.classList.toggle('is-navOpen', state);
       document.body.classList.toggle('is-locked', state);
 
+      if (!state) {
+        $$('.nav__item--dropdown.is-open').forEach(function (el) {
+          el.classList.remove('is-open');
+          var toggle = $('.nav__subToggle', el);
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        });
+      }
+
       if (tl) { state ? tl.play() : tl.reverse(); }
       else {
         nav.classList.toggle('is-open', state);
@@ -97,6 +105,16 @@
     }
 
     burger.addEventListener('click', function () { setOpen(!open); });
+
+    $$('.nav__subToggle').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var parent = btn.closest('.nav__item--dropdown');
+        if (!parent) return;
+        var isOpen = parent.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && open) setOpen(false);
@@ -176,6 +194,26 @@
         scrollTrigger: { trigger: el, start: 'top 85%', once: true }
       });
     });
+  }
+
+  /* ============================================================
+     5b. Slider de imágenes de cifras
+     ============================================================ */
+  function initStatsSlider() {
+    var root = $('#statsSlider');
+    if (!root) return;
+
+    var imgs = $$('.stats__sliderImg', root);
+    if (imgs.length < 2) return;
+
+    var index = 0;
+    var DELAY = 4500;
+
+    setInterval(function () {
+      imgs[index].classList.remove('is-active');
+      index = (index + 1) % imgs.length;
+      imgs[index].classList.add('is-active');
+    }, DELAY);
   }
 
   /* ============================================================
@@ -734,6 +772,7 @@
     initHero();
     initReveals();
     initCounters();
+    initStatsSlider();
     initSlider();
     initManifesto();
     initMarquees();
