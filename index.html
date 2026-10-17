@@ -38,13 +38,18 @@
         </a>
         <ul class="nav-dropdown__menu">
           <li><a href="cupea.html">CUPEA</a></li>
-          <li><a href="maestria.html#maestria-revista">MICI</a></li>
           <li><a href="publicaciones.html">Ver todo</a></li>
         </ul>
       </div>
       <a href="novedades.html">Novedades</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+
+    <div class="lang" role="group" aria-label="Idioma">
+      <button class="lang__btn is-active" type="button" lang="es" aria-pressed="true">ES</button>
+      <span class="lang__sep" aria-hidden="true">/</span>
+      <button class="lang__btn" type="button" lang="en" aria-pressed="false">EN</button>
+    </div>
 
     <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
       <span class="burger__label">Menú</span>
@@ -75,7 +80,6 @@
       <li class="nav__sub" id="navSubPublicaciones">
         <ul>
           <li><a href="cupea.html">CUPEA</a></li>
-          <li><a href="maestria.html#maestria-revista">MICI</a></li>
           <li><a href="publicaciones.html">Ver todo</a></li>
         </ul>
       </li>
@@ -285,15 +289,12 @@
         internacionales. En este campo de estudios nuclea a investigadores y docentes
         de la Universidad Nacional de Rosario y del Consejo Nacional de
         Investigaciones Científicas y Técnicas (CONICET).</p>
-        <p>Con cuatro décadas de labor ininterrumpida, el CERIR combina una vasta
-        experiencia académica con una constante vocación de innovación. Su
-        producción científica refleja profesionalismo, rigor metodológico y una
-        perspectiva global profundamente comprometida con el desarrollo socio-
-        económico y la proyección e inserción de Argentina en el mundo.</p>
-        <p>Esta trayectoria, junto con los debates, conversatorios y reuniones organizadas
-        en su seno apunta a la trasferencia de conocimientos, ofreciendo insumos
-        tanto para contribuir al diseño de políticas públicas como así también para la
-        construcción de una opinión ciudadana informada.</p>
+      </div>
+      <div class="members__actions">
+        <a class="btn btn--dark" href="institucional.html#historia">
+          Conocer más sobre el CERIR
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -305,21 +306,14 @@
         <h2 class="section-title" data-reveal>Miembros</h2>
         <p class="members__lead" data-reveal>
           Docentes, investigadores y becarios que integran los proyectos acreditados del centro.
-          Pasá el mouse sobre una tarjeta para detener la fila.
         </p>
       </header>
     </div>
 
     <div class="container">
-      <div class="axes" data-reveal>
-        <ul class="axes__list" id="axesList">
-          <!-- Los ejes se generan por JS desde assets/js/app.js (data: CERIR_DATA.researchAxes) -->
-        </ul>
-      </div>
-
       <div class="members__actions">
         <a class="btn btn--dark" href="indice.html">
-          Ver índice bibliográfico
+          Ver índice de miembros
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
         </a>
       </div>

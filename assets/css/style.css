@@ -1634,21 +1634,19 @@ ul { margin: 0; padding: 0; list-style: none; }
 .block__body { max-width: 68ch; }
 
 /* objetivos */
-.goals { counter-reset: goal; }
 .goals__item {
-  counter-increment: goal;
   display: grid;
-  grid-template-columns: 44px 1fr;
+  grid-template-columns: 24px 1fr;
   gap: 6px 14px;
   padding: clamp(20px, 2.4vw, 28px) 0;
   border-top: 1px solid var(--line);
 }
 .goals__item::before {
-  content: counter(goal, decimal-leading-zero);
+  content: "•";
   grid-row: 1 / span 2;
-  padding-top: .35em;
+  line-height: 1.2;
   font-family: var(--font-display);
-  font-size: .84rem; font-weight: 600;
+  font-size: 1.3rem; font-weight: 600;
   letter-spacing: .08em;
   color: var(--accent);
 }
@@ -1842,9 +1840,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--accent);
   margin-bottom: 14px;
 }
-.plan-list { counter-reset: plan; display: grid; gap: 2px; }
+.plan-list { display: grid; gap: 2px; }
 .plan-list li {
-  counter-increment: plan;
   position: relative;
   padding: 10px 0 10px 36px;
   border-top: 1px solid var(--line);
@@ -1853,10 +1850,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   line-height: 1.45;
 }
 .plan-list li::before {
-  content: counter(plan, decimal-leading-zero);
-  position: absolute; left: 0; top: 10px;
+  content: "•";
+  position: absolute; left: 0; top: 6px;
   font-family: var(--font-display);
-  font-size: .78rem; font-weight: 600;
+  font-size: 1.3rem; line-height: 1.2; font-weight: 600;
   letter-spacing: .04em;
   color: var(--ink);
 }
@@ -2207,3 +2204,12 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 20px); }
   .marquee__track { animation: none; }
   .carousel__track { scroll-behavior: auto; }
 }
+
+
+/* selector de idioma (visual; traducciones pendientes) */
+.lang { display: inline-flex; align-items: center; gap: 6px; margin-left: 0; margin-right: 14px; font-family: var(--font-display); font-size: .78rem; font-weight: 600; letter-spacing: .08em; color: inherit; }
+.lang__btn { background: none; border: 0; padding: 4px 2px; color: inherit; font: inherit; letter-spacing: inherit; cursor: pointer; opacity: .6; }
+.lang__btn:hover, .lang__btn.is-active { opacity: 1; }
+.lang__btn.is-active { border-bottom: 1.5px solid currentColor; }
+.lang__sep { opacity: .4; }
+.header__inner > .header__nav { margin-left: auto; margin-right: auto; }

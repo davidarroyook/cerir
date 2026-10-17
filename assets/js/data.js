@@ -573,7 +573,7 @@ window.CERIR_DATA = (function () {
      `kind: 'pdf'` → el ítem descarga assets/pdf/<id>.pdf (archivos de
      muestra de una página). `kind: 'external'` (MICI) → el ítem no
      tiene PDF propio: `externalUrl` apunta al Portal de Revistas UNR. */
-  var pubCategoryOrder = ['cupea', 'mici', 'libros', 'serie'];
+  var pubCategoryOrder = ['cupea', 'serie', 'libros'];
 
   var publications = {
     cupea: {
@@ -716,8 +716,8 @@ window.CERIR_DATA = (function () {
     pubCategory: function (slug) { return publications[slug] || null; },
     /* busca un ítem por id en todas las categorías */
     pubItem: function (id) {
-      for (var i = 0; i < pubCategoryOrder.length; i++) {
-        var cat = publications[pubCategoryOrder[i]];
+      for (var key in publications) {
+        var cat = publications[key];
         var item = byId(cat.items, id);
         if (item) return { item: item, category: cat };
       }
