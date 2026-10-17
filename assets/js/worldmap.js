@@ -71,9 +71,13 @@
 
   /* Nodos de la red (el hub es Rosario, sede del CERIR) */
   var HUB = { lon: -60.65, lat: -32.95, name: 'Rosario' };
-  /* Centroide aproximado de la masa continental de Sudamérica (promedio
-     de los vértices de su contorno), usado para centrar el mapa */
-  var SA_CENTER = { lon: -63.5, lat: -18.9 };
+  /* Centro del planisferio: un punto entre Sudamérica, África y el sur de
+     Asia (no el centroide de Sudamérica ni Greenwich), elegido para que el
+     recorte horizontal inevitable (mostrar ~360° en el ancho del hero)
+     caiga sobre el Pacífico —la franja con menos tierra relevante— en vez
+     de cortar el sudeste asiático/Oceanía. Rosario (HUB), más al oeste,
+     sigue quedando dentro del rango visible. */
+  var FULL_CENTER = { lon: 10, lat: -8 };
   var NODES = [
     { lon: -47.9,  lat: -15.8 },  /* Brasilia   */
     { lon: -70.6,  lat: -33.4 },  /* Santiago   */
@@ -92,6 +96,7 @@
 
   var LAT_TOP = 80, LAT_BOTTOM = -58;
   var DOT_STEP = 10;                /* separación de la grilla en px */
+
   var PALETTE = {
     dot:    [150, 178, 238],
     arc:    [70, 116, 255],
@@ -150,16 +155,18 @@
     this.canvas.height = Math.round(this.h * dpr);
     this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-    /* Rectángulo del mapa: tamaño proporcional al viewport, ampliado para
-       que el hemisferio sur tenga más presencia visual */
-    this.mw = Math.max(this.w * 2.5875, this.h * 4.6125);
+    /* Rectángulo del mapa: tamaño proporcional al viewport, ajustado para
+       mostrar el planisferio casi completo (no solo Sudamérica recortada) */
+    this.mw = Math.max(this.w * 1.1, this.h * 1.96);
     this.mh = this.mw * (LAT_TOP - LAT_BOTTOM) / 360;
 
-    /* Sudamérica se fija al centro exacto del hero (en vez de centrar el
-       mapa en el meridiano de Greenwich). Como Rosario está dentro de ese
-       continente, el punto de animación sigue coincidiendo con la ciudad. */
-    var c0x = ((SA_CENTER.lon + 180) / 360) * this.mw;
-    var c0y = ((LAT_TOP - SA_CENTER.lat) / (LAT_TOP - LAT_BOTTOM)) * this.mh;
+    /* El mapa se centra en FULL_CENTER —un punto entre Sudamérica, África
+       y el sur de Asia— en vez de Sudamérica o Greenwich. Así el recorte
+       horizontal inevitable (mostrar ~360° en el ancho del hero) cae sobre
+       el Pacífico, la franja con menos tierra relevante, en vez de cortar
+       el sudeste asiático/Oceanía. Rosario (HUB) queda dentro de ese rango. */
+    var c0x = ((FULL_CENTER.lon + 180) / 360) * this.mw;
+    var c0y = ((LAT_TOP - FULL_CENTER.lat) / (LAT_TOP - LAT_BOTTOM)) * this.mh;
     this.mx = this.w / 2 - c0x;
     this.my = this.h / 2 - c0y;
 
