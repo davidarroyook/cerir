@@ -11,207 +11,68 @@ window.CERIR_DATA = (function () {
 
   /* -------------------------------------------------- Miembros */
   var members = [
-    {
-      id: 'anabella-busso', name: 'Anabella Busso', tag: 'Directora',
-      role: 'Investigadora — CONICET', area: 'Política exterior argentina y relaciones con EE.UU.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 12 — Maipú 1065',
-      since: 1991, lines: ['Política exterior argentina', 'Relaciones hemisféricas', 'Democracia y agenda externa'],
-      bio: ['Dirige el CERIR y coordina la serie histórica sobre política exterior argentina que el centro publica desde fines de los años ochenta. Su trabajo se concentra en la relación entre los procesos políticos internos y las decisiones de inserción internacional del país, con especial atención al vínculo bilateral con los Estados Unidos.',
-            'Dicta seminarios de grado y posgrado en la Facultad de Ciencia Política y Relaciones Internacionales de la UNR y participa habitualmente en instancias de formación de becarios del centro.']
-    },
-    {
-      id: 'miryam-colacrai', name: 'Miryam Colacrai', tag: 'Titular',
-      role: 'Investigadora — CONICET', area: 'Régimen antártico y política internacional polar.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 12 — Maipú 1065',
-      since: 1989, lines: ['Régimen antártico', 'Regímenes internacionales', 'Cooperación científica'],
-      bio: ['Su línea de trabajo aborda el Tratado Antártico como caso de estudio sobre la construcción y la durabilidad de los regímenes internacionales, y el lugar que ocupan los países del hemisferio sur en esa arquitectura.',
-            'Integra el centro desde sus primeros años y participa en la formación de tesistas sobre cooperación científica y espacios de gobernanza global.']
-    },
-    {
-      id: 'gladys-lechini', name: 'Gladys Lechini', tag: 'Titular',
-      role: 'Profesora titular — UNR', area: 'Cooperación Sur-Sur y relaciones con África.',
-      degree: 'Doctorado en Ciencia Política', office: 'Oficina 8 — Maipú 1065',
-      since: 1990, lines: ['Relaciones Argentina–África', 'Cooperación Sur-Sur', 'Estudios africanos'],
-      bio: ['Trabaja sobre los vínculos entre América Latina y África y sobre la cooperación Sur-Sur como categoría analítica y como práctica de política exterior. Impulsó la incorporación de los estudios africanos a la agenda de investigación y de enseñanza de la Facultad.']
-    },
-    {
-      id: 'alejandro-simonoff', name: 'Alejandro Simonoff', tag: 'Adjunto',
-      role: 'Investigador — UNR', area: 'Historia de la política exterior argentina.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 8 — Maipú 1065',
-      since: 1998, lines: ['Historia diplomática', 'Autonomía', 'Doctrinas de política exterior'],
-      bio: ['Investiga las continuidades y rupturas de la política exterior argentina en el largo plazo, con foco en el modo en que las distintas tradiciones de pensamiento —autonomistas, realistas, liberales— se traducen en decisiones concretas.']
-    },
-    {
-      id: 'gustavo-marini', name: 'Gustavo Marini', tag: 'Titular',
-      role: 'Profesor — UNR', area: 'Teoría de las relaciones internacionales.',
-      degree: 'Magíster en Relaciones Internacionales', office: 'Oficina 5 — Maipú 1065',
-      since: 1994, lines: ['Teoría de las RR.II.', 'Epistemología', 'Orden internacional'],
-      bio: ['Dicta los seminarios de teoría del centro y trabaja sobre los debates epistemológicos de la disciplina, en particular sobre cómo las categorías producidas en los centros académicos del norte se usan —y se tensionan— para leer la política internacional desde la periferia.']
-    },
-    {
-      id: 'carla-morasso', name: 'Carla Morasso', tag: 'Adjunta',
-      role: 'Investigadora — CONICET', area: 'Relaciones económicas internacionales y BRICS.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 10 — Maipú 1065',
-      since: 2008, lines: ['BRICS', 'Cooperación Sur-Sur', 'Recursos naturales'],
-      bio: ['Estudia la inserción económica internacional de la Argentina y el papel de las potencias emergentes, con trabajos sobre el bloque BRICS, el financiamiento para el desarrollo y la disputa por los recursos naturales.']
-    },
-    {
-      id: 'esteban-actis', name: 'Esteban Actis', tag: 'Adjunto',
-      role: 'Investigador — UNR', area: 'Economía política internacional y potencias medias.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 10 — Maipú 1065',
-      since: 2011, lines: ['Economía política internacional', 'Potencias medias', 'Brasil'],
-      bio: ['Su investigación cruza economía política internacional y política exterior comparada, con foco en el comportamiento de las potencias medias sudamericanas y en el impacto de la competencia entre grandes potencias sobre los márgenes de acción de la región.']
-    },
-
-    {
-      id: 'maria-elena-lorenzini', name: 'María Elena Lorenzini', tag: 'Adjunta',
-      role: 'Investigadora — CONICET', area: 'Política exterior de Chile y vínculos bilaterales.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 11 — Maipú 1065',
-      since: 2004, lines: ['Relaciones Argentina–Chile', 'Política exterior comparada', 'Integración'],
-      bio: ['Trabaja sobre la política exterior chilena y sobre la relación bilateral con la Argentina, atendiendo a los mecanismos institucionales de la vecindad: integración física, acuerdos fronterizos y coordinación en foros regionales.']
-    },
-    {
-      id: 'julieta-zelicovich', name: 'Julieta Zelicovich', tag: 'Adjunta',
-      role: 'Investigadora — CONICET', area: 'Negociaciones comerciales y régimen multilateral.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 11 — Maipú 1065',
-      since: 2010, lines: ['OMC y comercio', 'Negociaciones internacionales', 'Mercosur'],
-      bio: ['Investiga el régimen multilateral de comercio y las negociaciones en las que participa la Argentina, tanto en la Organización Mundial del Comercio como en los acuerdos del Mercosur con terceros socios.']
-    },
-    {
-      id: 'gabriela-marchetti', name: 'Gabriela Marchetti', tag: 'JTP',
-      role: 'Docente — UNR', area: 'Integración regional y Mercosur.',
-      degree: 'Magíster en Integración Regional', office: 'Oficina 5 — Maipú 1065',
-      since: 2007, lines: ['Mercosur', 'Integración regional', 'Instituciones'],
-      bio: ['Acompaña las materias de integración regional y trabaja sobre el desarrollo institucional del Mercosur, sus instancias de participación social y las tensiones entre las agendas comercial y política del bloque.']
-    },
-    {
-      id: 'emanuel-porcelli', name: 'Emanuel Porcelli', tag: 'Asociado',
-      role: 'Investigador asociado', area: 'Instituciones regionales y gobernanza global.',
-      degree: 'Doctorado en Ciencias Sociales', office: 'Investigador asociado — sin oficina asignada',
-      since: 2015, lines: ['Gobernanza global', 'Organismos regionales', 'Educación superior'],
-      bio: ['Aporta al centro una mirada sobre las instituciones regionales y los procesos de gobernanza global, con trabajos sobre organismos multilaterales y sobre la internacionalización de la educación superior.']
-    },
-    {
-      id: 'ruben-paredes', name: 'Rubén Paredes', tag: 'Titular',
-      role: 'Profesor — UNR', area: 'Medio Oriente y estudios de seguridad.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 7 — Maipú 1065',
-      since: 1996, lines: ['Medio Oriente', 'Estudios de seguridad', 'Conflictos armados'],
-      bio: ['Coordina el área de Medio Oriente del centro y trabaja sobre los conflictos de la región, las dinámicas de seguridad regional y su lectura desde América Latina.']
-    },
-    {
-      id: 'sabrina-olivera', name: 'Sabrina Olivera', tag: 'Becaria',
-      role: 'Becaria doctoral', area: 'Diplomacia climática y agenda ambiental.',
-      degree: 'Doctorado en curso — Relaciones Internacionales', office: 'Sala de becarios — Maipú 1065',
-      since: 2021, lines: ['Diplomacia climática', 'Régimen ambiental', 'Negociaciones COP'],
-      bio: ['Desarrolla su tesis doctoral sobre la participación argentina en las negociaciones climáticas multilaterales y sobre el modo en que los compromisos ambientales se articulan con la política exterior económica.']
-    },
-    {
-      id: 'federico-merke', name: 'Federico Merke', tag: 'Invitado',
-      role: 'Investigador invitado', area: 'Orden internacional y política exterior comparada.',
-      degree: 'Doctorado en Ciencias Sociales', office: 'Investigador invitado — sin oficina asignada',
-      since: 2019, lines: ['Orden internacional', 'Política exterior comparada', 'Teoría'],
-      bio: ['Participa en los seminarios del centro con trabajos sobre las transformaciones del orden internacional y sobre el estudio comparado de las políticas exteriores latinoamericanas.']
-    },
-
-    {
-      id: 'lucrecia-fernandez', name: 'Lucrecia Fernández', tag: 'Becaria',
-      role: 'Becaria posdoctoral', area: 'Cooperación técnica y desarrollo internacional.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Sala de becarios — Maipú 1065',
-      since: 2019, lines: ['Cooperación internacional', 'Desarrollo', 'Cooperación triangular'],
-      bio: ['Su investigación posdoctoral aborda la cooperación técnica argentina y los esquemas de cooperación triangular, con atención a los criterios que definen prioridades y socios.']
-    },
-    {
-      id: 'marcelo-videtta', name: 'Marcelo Videtta', tag: 'JTP',
-      role: 'Docente — UNR', area: 'Política exterior brasileña.',
-      degree: 'Magíster en Relaciones Internacionales', office: 'Oficina 7 — Maipú 1065',
-      since: 2009, lines: ['Brasil', 'Relaciones bilaterales', 'Política regional'],
-      bio: ['Trabaja sobre la política exterior de Brasil y su impacto en la agenda regional, con foco en los ciclos de acercamiento y distanciamiento del vínculo bilateral con la Argentina.']
-    },
-    {
-      id: 'natalia-ceppi', name: 'Natalia Ceppi', tag: 'Adjunta',
-      role: 'Investigadora — CONICET', area: 'Recursos naturales y política internacional.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 9 — Maipú 1065',
-      since: 2009, lines: ['Recursos naturales', 'Bolivia y Paraguay', 'Energía'],
-      bio: ['Investiga la dimensión internacional de los recursos naturales en América del Sur, con trabajos sobre hidrocarburos, energía y las relaciones de la Argentina con Bolivia y Paraguay.']
-    },
-    {
-      id: 'paula-guerra', name: 'Paula Guerra', tag: 'Adjunta',
-      role: 'Investigadora — UNR', area: 'Género y relaciones internacionales.',
-      degree: 'Doctorado en Ciencia Política', office: 'Oficina 9 — Maipú 1065',
-      since: 2013, lines: ['Género y RR.II.', 'Política exterior feminista', 'Derechos humanos'],
-      bio: ['Coordina la línea de género del centro y trabaja sobre la incorporación de la perspectiva de género en la política exterior y en las agencias de cooperación, así como sobre los debates en torno a las políticas exteriores feministas.']
-    },
-    {
-      id: 'diego-cannizzaro', name: 'Diego Cannizzaro', tag: 'Becario',
-      role: 'Becario doctoral', area: 'Defensa y política de seguridad regional.',
-      degree: 'Doctorado en curso — Relaciones Internacionales', office: 'Sala de becarios — Maipú 1065',
-      since: 2022, lines: ['Política de defensa', 'Seguridad regional', 'Fuerzas armadas'],
-      bio: ['Su tesis analiza la coordinación en materia de defensa entre los países del Cono Sur y las dificultades de sostener agendas comunes frente a ciclos políticos divergentes.']
-    },
-    {
-      id: 'victoria-zapata', name: 'Victoria Zapata', tag: 'JTP',
-      role: 'Docente — UNR', area: 'Migraciones internacionales y derechos humanos.',
-      degree: 'Magíster en Derechos Humanos', office: 'Oficina 6 — Maipú 1065',
-      since: 2012, lines: ['Migraciones', 'Derechos humanos', 'Políticas migratorias'],
-      bio: ['Trabaja sobre movilidad humana en la región y sobre la relación entre las políticas migratorias nacionales y los compromisos internacionales en materia de derechos humanos.']
-    },
-    {
-      id: 'hernan-fernandez', name: 'Hernán Fernández', tag: 'Asociado',
-      role: 'Investigador asociado', area: 'Asia-Pacífico y vínculos con China.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Investigador asociado — sin oficina asignada',
-      since: 2016, lines: ['China', 'Asia-Pacífico', 'Comercio e inversiones'],
-      bio: ['Estudia la presencia china en América del Sur —comercio, inversiones, financiamiento— y los dilemas que plantea para las estrategias de inserción internacional de los países de la región.']
-    },
-
-    {
-      id: 'camila-rios', name: 'Camila Ríos', tag: 'Becaria',
-      role: 'Becaria doctoral', area: 'Multilateralismo y Naciones Unidas.',
-      degree: 'Doctorado en curso — Relaciones Internacionales', office: 'Sala de becarios — Maipú 1065',
-      since: 2023, lines: ['Naciones Unidas', 'Multilateralismo', 'Operaciones de paz'],
-      bio: ['Investiga la participación argentina en el sistema de Naciones Unidas, con foco en las operaciones de mantenimiento de la paz y en las candidaturas a organismos multilaterales.']
-    },
-    {
-      id: 'andres-lofiego', name: 'Andrés Lofiego', tag: 'JTP',
-      role: 'Docente — UNR', area: 'Historia diplomática latinoamericana.',
-      degree: 'Magíster en Historia', office: 'Oficina 6 — Maipú 1065',
-      since: 2011, lines: ['Historia diplomática', 'América Latina', 'Archivos'],
-      bio: ['Acompaña las materias de historia de las relaciones internacionales y trabaja con fuentes de archivo sobre la diplomacia latinoamericana del siglo XX.']
-    },
-    {
-      id: 'silvia-rosales', name: 'Silvia Rosales', tag: 'Titular',
-      role: 'Profesora — UNR', area: 'Derecho internacional público.',
-      degree: 'Doctorado en Derecho', office: 'Oficina 4 — Maipú 1065',
-      since: 1997, lines: ['Derecho internacional', 'Tratados', 'Solución de controversias'],
-      bio: ['Aporta la dimensión jurídica a los proyectos del centro, con trabajos sobre derecho de los tratados y sobre los mecanismos de solución de controversias en los que interviene la Argentina.']
-    },
-    {
-      id: 'martin-ruggiero', name: 'Martín Ruggiero', tag: 'Adjunto',
-      role: 'Investigador — CONICET', area: 'Comercio agroindustrial y agenda global.',
-      degree: 'Doctorado en Relaciones Internacionales', office: 'Oficina 10 — Maipú 1065',
-      since: 2014, lines: ['Comercio agroindustrial', 'Cadenas globales', 'Sostenibilidad'],
-      bio: ['Analiza la inserción del complejo agroindustrial argentino en las cadenas globales de valor y el impacto de las nuevas exigencias ambientales de los mercados de destino.']
-    },
-    {
-      id: 'florencia-vitali', name: 'Florencia Vitali', tag: 'Becaria',
-      role: 'Becaria posdoctoral', area: 'Ciudades y paradiplomacia.',
-      degree: 'Doctorado en Ciencia Política', office: 'Sala de becarios — Maipú 1065',
-      since: 2020, lines: ['Paradiplomacia', 'Ciudades', 'Redes internacionales'],
-      bio: ['Estudia la acción internacional de gobiernos locales y provincias, y el modo en que ciudades como Rosario construyen agendas propias en redes internacionales.']
-    },
-    {
-      id: 'juan-pablo-sosa', name: 'Juan Pablo Sosa', tag: 'JTP',
-      role: 'Docente — UNR', area: 'Integración energética sudamericana.',
-      degree: 'Magíster en Relaciones Internacionales', office: 'Oficina 4 — Maipú 1065',
-      since: 2015, lines: ['Energía', 'Integración física', 'Infraestructura'],
-      bio: ['Trabaja sobre los proyectos de integración energética e infraestructura en América del Sur y sobre las condiciones políticas que explican sus avances y estancamientos.']
-    },
-    {
-      id: 'valeria-iglesias', name: 'Valeria Iglesias', tag: 'Asociada',
-      role: 'Investigadora asociada', area: 'Unión Europea y política de vecindad.',
-      degree: 'Doctorado en Estudios Europeos', office: 'Investigadora asociada — sin oficina asignada',
-      since: 2017, lines: ['Unión Europea', 'Mercosur–UE', 'Política comercial'],
-      bio: ['Investiga la política externa de la Unión Europea y la larga negociación del acuerdo con el Mercosur, atendiendo tanto a los intereses comerciales como a las condicionalidades regulatorias.']
-    }
+    {"id": "miryam-colacrai", "name": "Miryam Colacrai", "surname": "Colacrai", "givenNames": "Miryam", "tag": "Directora", "role": "Dra. en Ciencias Sociales (Universidad de Buenos Aires)", "area": "Antártida y política antártica argentina; relaciones políticas bilaterales Argentina–Chile; actores subnacionales; teoría de las Relaciones Internacionales y de la cooperación internacional", "degree": "Dra. en Ciencias Sociales (Universidad de Buenos Aires)", "email": "miryam.colacrai@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Antártida y política antártica argentina", "relaciones políticas bilaterales Argentina–Chile", "actores subnacionales", "teoría de las Relaciones Internacionales y de la cooperación internacional"], "bio": ["Información no disponible"]},
+    {"id": "gladys-lechini", "name": "Gladys Lechini", "surname": "Lechini", "givenNames": "Gladys", "tag": "Directora", "role": "Doutor em Ciências: Sociologia (Faculdade de Filosofia, Letras e Ciências Humanas, Universidade de São Paulo, Brasil)", "area": "Relaciones Internacionales; política exterior argentina; estudios africanos; cooperación Sur–Sur; IBSA; BRICS; relaciones América Latina–África; política exterior argentina, brasileña y sudafricana", "degree": "Doutor em Ciências: Sociologia (Faculdade de Filosofia, Letras e Ciências Humanas, Universidade de São Paulo, Brasil)", "email": "gladystlechini@yahoo.com.ar / gladys.lechini@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Relaciones Internacionales", "política exterior argentina", "estudios africanos", "cooperación Sur–Sur", "IBSA", "BRICS", "relaciones América Latina–África", "política exterior argentina, brasileña y sudafricana"], "bio": ["Información no disponible"]},
+    {"id": "maria-victoria-alvarez", "name": "María Victoria Álvarez", "surname": "Álvarez", "givenNames": "María Victoria", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Unión Europea; regionalismo latinoamericano; regionalismo comparado; relaciones UE–LAC; relaciones UE–Mercosur", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "maria.alvarez@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Unión Europea", "regionalismo latinoamericano", "regionalismo comparado", "relaciones UE–LAC", "relaciones UE–Mercosur"], "bio": ["Información no disponible"]},
+    {"id": "sabrina-benedetto", "name": "Sabrina Benedetto", "surname": "Benedetto", "givenNames": "Sabrina", "tag": "Miembro titular", "role": "Mg. en Relaciones Internacionales (FLACSO)", "area": "Multilateralismo; cooperación al desarrollo", "degree": "Mg. en Relaciones Internacionales (FLACSO)", "email": "sabrinabenedetto@gmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Multilateralismo", "cooperación al desarrollo"], "bio": ["Información no disponible"]},
+    {"id": "pilar-bueno", "name": "Pilar Bueno", "surname": "Bueno", "givenNames": "Pilar", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Políticas ambientales; cambio climático; política exterior argentina", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "maria.bueno@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Políticas ambientales", "cambio climático", "política exterior argentina"], "bio": ["Información no disponible"]},
+    {"id": "anabella-busso", "name": "Anabella Busso", "surname": "Busso", "givenNames": "Anabella", "tag": "Miembro titular", "role": "Mg. en Ciencia Política (FLACSO)", "area": "Política exterior argentina; política exterior de Estados Unidos; relaciones bilaterales entre Argentina y Estados Unidos", "degree": "Mg. en Ciencia Política (FLACSO)", "email": "anabella.busso@gmail.com / anabella.busso@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Política exterior argentina", "política exterior de Estados Unidos", "relaciones bilaterales entre Argentina y Estados Unidos"], "bio": ["Información no disponible"]},
+    {"id": "marta-cabeza", "name": "Marta Cabeza", "surname": "Cabeza", "givenNames": "Marta", "tag": "Miembro titular", "role": "Mg. en Integración y Cooperación Internacional (UNR)", "area": "Estudios regionales", "degree": "Mg. en Integración y Cooperación Internacional (UNR)", "email": "marcabeza@yahoo.com", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Estudios regionales"], "bio": ["Información no disponible"]},
+    {"id": "emilse-e-calderon", "name": "Emilse E. Calderón", "surname": "Calderón", "givenNames": "Emilse E.", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Seguridad internacional; tendencias sistémicas y de la región latinoamericana; cooperación en BRICS con foco en la política de Rusia; política de defensa argentina", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "emilsecalderon@hotmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Seguridad internacional", "tendencias sistémicas y de la región latinoamericana", "cooperación en BRICS con foco en la política de Rusia", "política de defensa argentina"], "bio": ["Información no disponible"]},
+    {"id": "magdalena-carrancio", "name": "Magdalena Carrancio", "surname": "Carrancio", "givenNames": "Magdalena", "tag": "Miembro titular", "role": "Mg. en Cooperación e Integración Internacional (UNR)", "area": "Cooperación internacional; metodología de la investigación con apoyo de IA", "degree": "Mg. en Cooperación e Integración Internacional (UNR)", "email": "cerir@unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Cooperación internacional", "metodología de la investigación con apoyo de IA"], "bio": ["Información no disponible"]},
+    {"id": "vanesa-castello", "name": "Vanesa Castello", "surname": "Castello", "givenNames": "Vanesa", "tag": "Miembro titular", "role": "Mg. en Integración y Cooperación Internacional (UNR)", "area": "Derecho del mar; explotación de recursos naturales en el Atlántico Sur", "degree": "Mg. en Integración y Cooperación Internacional (UNR)", "email": "vanesa.castello@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Derecho del mar", "explotación de recursos naturales en el Atlántico Sur"], "bio": ["Información no disponible"]},
+    {"id": "maria-julieta-cortes", "name": "María Julieta Cortés", "surname": "Cortés", "givenNames": "María Julieta", "tag": "Miembro titular", "role": "Mg. en Ciencias Sociales con Orientación en Ciencia Política (FLACSO)", "area": "Internacionalización de la Educación Superior", "degree": "Mg. en Ciencias Sociales con Orientación en Ciencia Política (FLACSO)", "email": "maria.cortes@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Internacionalización de la Educación Superior"], "bio": ["Información no disponible"]},
+    {"id": "paula-demarchi", "name": "Paula Demarchi", "surname": "Demarchi", "givenNames": "Paula", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Cooperación internacional en ciencia y tecnología; diplomacia científica", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "paulademarchi@hotmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Cooperación internacional en ciencia y tecnología", "diplomacia científica"], "bio": ["Información no disponible"]},
+    {"id": "maria-noel-dussort", "name": "María Noel Dussort", "surname": "Dussort", "givenNames": "María Noel", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Transición energética de las potencias emergentes, con particular énfasis en Brasil, India y China; política exterior de las potencias emergentes vinculada a energía, con foco en América Latina", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "maria.dussort@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Transición energética de las potencias emergentes, con particular énfasis en Brasil, India y China", "política exterior de las potencias emergentes vinculada a energía, con foco en América Latina"], "bio": ["Información no disponible"]},
+    {"id": "ornela-fabani", "name": "Ornela Fabani", "surname": "Fabani", "givenNames": "Ornela", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Política exterior argentina hacia Medio Oriente", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "ornela_fabani@hotmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Política exterior argentina hacia Medio Oriente"], "bio": ["Información no disponible"]},
+    {"id": "jose-fernandez-alonso", "name": "José Fernández Alonso", "surname": "Fernández Alonso", "givenNames": "José", "tag": "Miembro titular", "role": "Dr. en Relaciones Internacionales (UNR)", "area": "Economía Política Internacional; finanzas internacionales; finanzas verdes", "degree": "Dr. en Relaciones Internacionales (UNR)", "email": "josefernandezalonso@conicet.gov.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Economía Política Internacional", "finanzas internacionales", "finanzas verdes"], "bio": ["Información no disponible"]},
+    {"id": "lidia-gatti", "name": "Lidia Gatti", "surname": "Gatti", "givenNames": "Lidia", "tag": "Miembro titular", "role": "Mg. en Integración y Cooperación Internacional (UNR)", "area": "Derecho Internacional Público", "degree": "Mg. en Integración y Cooperación Internacional (UNR)", "email": "lidiavgatti@hotmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Derecho Internacional Público"], "bio": ["Información no disponible"]},
+    {"id": "clarisa-giaccaglia", "name": "Clarisa Giaccaglia", "surname": "Giaccaglia", "givenNames": "Clarisa", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Poderes emergentes; coaliciones multilaterales: BRICS; seguimiento de políticas exteriores de India, Brasil y Sudáfrica; gobernanza global de Internet e IA; salud global", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "clarisa.giaccaglia@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Poderes emergentes", "coaliciones multilaterales: BRICS", "seguimiento de políticas exteriores de India, Brasil y Sudáfrica", "gobernanza global de Internet e IA", "salud global"], "bio": ["Información no disponible"]},
+    {"id": "maria-elena-lorenzini", "name": "María Elena Lorenzini", "surname": "Lorenzini", "givenNames": "María Elena", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Política exterior argentina; teoría de las Relaciones Internacionales; relaciones bilaterales Argentina–Chile; política exterior de Venezuela", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "maria.lorenzini@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Política exterior argentina", "teoría de las Relaciones Internacionales", "relaciones bilaterales Argentina–Chile", "política exterior de Venezuela"], "bio": ["Información no disponible"]},
+    {"id": "agustina-marchetti", "name": "Agustina Marchetti", "surname": "Marchetti", "givenNames": "Agustina", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Política exterior de China hacia África y América Latina; cooperación en infraestructura; gobernanza de IA", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "agustina.marchetti@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Política exterior de China hacia África y América Latina", "cooperación en infraestructura", "gobernanza de IA"], "bio": ["Información no disponible"]},
+    {"id": "elsa-marinucci", "name": "Elsa Marinucci", "surname": "Marinucci", "givenNames": "Elsa", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Información no disponible", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "elsa.marinucci@gmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "carla-morasso", "name": "Carla Morasso", "surname": "Morasso", "givenNames": "Carla", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Política exterior argentina; política exterior africana; cooperación al desarrollo", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "carla.morasso@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Política exterior argentina", "política exterior africana", "cooperación al desarrollo"], "bio": ["Información no disponible"]},
+    {"id": "alicia-pia-morbiducci-ponce", "name": "Alicia Pía Morbiducci Ponce", "surname": "Morbiducci Ponce", "givenNames": "Alicia Pía", "tag": "Miembro titular", "role": "Mg. en Integración y Cooperación Internacional (UNR)", "area": "Información no disponible", "degree": "Mg. en Integración y Cooperación Internacional (UNR)", "email": "piamorbiducci@hotmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "ruben-paredes-rodriguez", "name": "Rubén Paredes Rodríguez", "surname": "Paredes Rodríguez", "givenNames": "Rubén", "tag": "Miembro titular", "role": "Dr. en Relaciones Internacionales (UNR)", "area": "Información no disponible", "degree": "Dr. en Relaciones Internacionales (UNR)", "email": "ruben.paredes@fcpolit.unr.edu.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "gisela-pereyra-doval", "name": "Gisela Pereyra Doval", "surname": "Pereyra Doval", "givenNames": "Gisela", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Política exterior argentina y brasileña; derechas radicales y civilizacionismo como clave de análisis del orden internacional", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "gpdoval@gmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Política exterior argentina y brasileña", "derechas radicales y civilizacionismo como clave de análisis del orden internacional"], "bio": ["Información no disponible"]},
+    {"id": "carolina-pesuto", "name": "Carolina Pesuto", "surname": "Pesuto", "givenNames": "Carolina", "tag": "Miembro titular", "role": "Dra. en Relaciones Internacionales (UNR)", "area": "Política internacional subnacional y paradiplomacia; inserción profesional de especialistas en Relaciones Internacionales", "degree": "Dra. en Relaciones Internacionales (UNR)", "email": "caropesuto@gmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": ["Política internacional subnacional y paradiplomacia", "inserción profesional de especialistas en Relaciones Internacionales"], "bio": ["Información no disponible"]},
+    {"id": "hugo-daniel-ramos", "name": "Hugo Daniel Ramos", "surname": "Ramos", "givenNames": "Hugo Daniel", "tag": "Miembro titular", "role": "Dr. en Relaciones Internacionales (UNR)", "area": "Información no disponible", "degree": "Dr. en Relaciones Internacionales (UNR)", "email": "ramoshugo78@gmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "patricia-rojo", "name": "Patricia Rojo", "surname": "Rojo", "givenNames": "Patricia", "tag": "Miembro titular", "role": "Mg. en Ciencia Política y Sociología (FLACSO)", "area": "Información no disponible", "degree": "Mg. en Ciencia Política y Sociología (FLACSO)", "email": "patriciaarojo@gmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "ricardo-juan-torres", "name": "Ricardo Juan Torres", "surname": "Torres", "givenNames": "Ricardo Juan", "tag": "Miembro titular", "role": "Dr. en Relaciones Internacionales (UNR)", "area": "Información no disponible", "degree": "Dr. en Relaciones Internacionales (UNR)", "email": "rtorres1957@hotmail.com", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "jose-maria-vitta", "name": "José María Vitta", "surname": "Vitta", "givenNames": "José María", "tag": "Miembro titular", "role": "Mg. en Integración y Cooperación Internacional (UNR)", "area": "Información no disponible", "degree": "Mg. en Integración y Cooperación Internacional (UNR)", "email": "josemariavitta@eproecon.com.ar", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "camila-abbondanzieri", "name": "Camila Abbondanzieri", "surname": "Abbondanzieri", "givenNames": "Camila", "tag": "Grupo joven", "role": "Doctora en Relaciones Internacionales (UNR)", "area": "Información no disponible", "degree": "Doctora en Relaciones Internacionales (UNR)", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "luisa-badala", "name": "Luisa Badala", "surname": "Badala", "givenNames": "Luisa", "tag": "Grupo joven", "role": "Mg. en Integración y Cooperación Internacional (UNR)", "area": "Información no disponible", "degree": "Mg. en Integración y Cooperación Internacional (UNR)", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "fabian-drisun", "name": "Fabián Drisun", "surname": "Drisun", "givenNames": "Fabián", "tag": "Grupo joven", "role": "Licenciado en Relaciones Internacionales (UNR). Cursando Maestría en Integración y Cooperación Internacional (UNR)", "area": "Información no disponible", "degree": "Licenciado en Relaciones Internacionales (UNR). Cursando Maestría en Integración y Cooperación Internacional (UNR)", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "josefina-garcia", "name": "Josefina García", "surname": "García", "givenNames": "Josefina", "tag": "Grupo joven", "role": "Licenciada en Relaciones Internacionales (UNR)", "area": "Información no disponible", "degree": "Licenciada en Relaciones Internacionales (UNR)", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "martin-jorge", "name": "Martín Jorge", "surname": "Jorge", "givenNames": "Martín", "tag": "Grupo joven", "role": "Licenciado en Relaciones Internacionales (UNR)", "area": "Información no disponible", "degree": "Licenciado en Relaciones Internacionales (UNR)", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "carolina-martinez", "name": "Carolina Martínez", "surname": "Martínez", "givenNames": "Carolina", "tag": "Grupo joven", "role": "Licenciada en Relaciones Internacionales (UNR). Cursando Doctorado en Relaciones Internacionales (UNR)", "area": "Información no disponible", "degree": "Licenciada en Relaciones Internacionales (UNR). Cursando Doctorado en Relaciones Internacionales (UNR)", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "santiago-molfino", "name": "Santiago Molfino", "surname": "Molfino", "givenNames": "Santiago", "tag": "Grupo joven", "role": "Doctor en Relaciones Internacionales (UNR) y en Estudios Internacionales (L'Orientale di Napoli)", "area": "Información no disponible", "degree": "Doctor en Relaciones Internacionales (UNR) y en Estudios Internacionales (L'Orientale di Napoli)", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "maricruz-scotta", "name": "Maricruz Scotta", "surname": "Scotta", "givenNames": "Maricruz", "tag": "Grupo joven", "role": "Licenciada en Relaciones Internacionales (UNR). Cursando Doctorado en Relaciones Internacionales (UNR)", "area": "Información no disponible", "degree": "Licenciada en Relaciones Internacionales (UNR). Cursando Doctorado en Relaciones Internacionales (UNR)", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "eugenia-suvire", "name": "Eugenia Suvire", "surname": "Suvire", "givenNames": "Eugenia", "tag": "Grupo joven", "role": "Licenciada en Relaciones Internacionales (UNR). Cursando Maestría en Integración y Cooperación Internacional (UNR)", "area": "Información no disponible", "degree": "Licenciada en Relaciones Internacionales (UNR). Cursando Maestría en Integración y Cooperación Internacional (UNR)", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "francisco-aldecoa", "name": "Francisco Aldecoa", "surname": "Aldecoa", "givenNames": "Francisco", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — España", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "celestino-del-arenal", "name": "Celestino Del Arenal", "surname": "Del Arenal", "givenNames": "Celestino", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — España", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "renato-di-nubila", "name": "Renato Di Nubila", "surname": "Di Nubila", "givenNames": "Renato", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Italia", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "miguel-angel-espeche-gil", "name": "Miguel Ángel Espeche Gil", "surname": "Espeche Gil", "givenNames": "Miguel Ángel", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Argentina", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "vicente-espeche-gil", "name": "Vicente Espeche Gil", "surname": "Espeche Gil", "givenNames": "Vicente", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Argentina", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "paulo-vicentini", "name": "Paulo Vicentini", "surname": "Vicentini", "givenNames": "Paulo", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Brasil", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "pietro-massina", "name": "Pietro Massina", "surname": "Massina", "givenNames": "Pietro", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Italia", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "luis-maira", "name": "Luis Maira", "surname": "Maira", "givenNames": "Luis", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Chile", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "carlos-moneta", "name": "Carlos Moneta", "surname": "Moneta", "givenNames": "Carlos", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Argentina", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "antonio-nino-rodriguez", "name": "Antonio Niño Rodríguez", "surname": "Niño Rodríguez", "givenNames": "Antonio", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — España", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "carlos-perez-llana", "name": "Carlos Pérez Llana", "surname": "Pérez Llana", "givenNames": "Carlos", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Argentina", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "julio-perez-serrano", "name": "Julio Pérez Serrano", "surname": "Pérez Serrano", "givenNames": "Julio", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — España", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "fernando-enrique-petrella", "name": "Fernando Enrique Petrella", "surname": "Petrella", "givenNames": "Fernando Enrique", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Argentina", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "hugo-suppo", "name": "Hugo Suppo", "surname": "Suppo", "givenNames": "Hugo", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Brasil", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "roberto-russell", "name": "Roberto Russell", "surname": "Russell", "givenNames": "Roberto", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Argentina", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "miguel-g-vallone", "name": "Miguel G. Vallone", "surname": "Vallone", "givenNames": "Miguel G.", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Argentina", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "luciano-zaccara", "name": "Luciano Zaccara", "surname": "Zaccara", "givenNames": "Luciano", "tag": "Miembro correspondiente", "role": "Miembro correspondiente — Qatar", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "luis-beltran", "name": "Luis Beltrán", "surname": "Beltrán", "givenNames": "Luis", "tag": "In memoriam", "role": "In memoriam — España", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "luis-dallanegra-pedraza", "name": "Luis Dallanegra Pedraza", "surname": "Dallanegra Pedraza", "givenNames": "Luis", "tag": "In memoriam", "role": "In memoriam — Argentina", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "wilson-nerys-fernandez", "name": "Wilson Nerys Fernández", "surname": "Fernández", "givenNames": "Wilson Nerys", "tag": "In memoriam", "role": "In memoriam — Uruguay", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "hector-gros-espiell", "name": "Héctor Gros Espiell", "surname": "Gros Espiell", "givenNames": "Héctor", "tag": "In memoriam", "role": "In memoriam — Uruguay", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "helio-jaguaribe-de-mattos", "name": "Helio Jaguaribe de Mattos", "surname": "Jaguaribe de Mattos", "givenNames": "Helio", "tag": "In memoriam", "role": "In memoriam — Brasil", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "francisco-pinon", "name": "Francisco Piñón", "surname": "Piñón", "givenNames": "Francisco", "tag": "In memoriam", "role": "In memoriam — Argentina", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]},
+    {"id": "luciano-tomassini", "name": "Luciano Tomassini", "surname": "Tomassini", "givenNames": "Luciano", "tag": "In memoriam", "role": "In memoriam — Chile", "area": "Información no disponible", "degree": "Información no disponible", "email": "", "office": "Información no disponible", "since": "Información no disponible", "lines": [], "bio": ["Información no disponible"]}
   ];
 
   /* -------------------------------------------------- Ejes de investigación
@@ -573,7 +434,7 @@ window.CERIR_DATA = (function () {
      `kind: 'pdf'` → el ítem descarga assets/pdf/<id>.pdf (archivos de
      muestra de una página). `kind: 'external'` (MICI) → el ítem no
      tiene PDF propio: `externalUrl` apunta al Portal de Revistas UNR. */
-  var pubCategoryOrder = ['cupea', 'mici', 'libros', 'serie'];
+  var pubCategoryOrder = ['cupea', 'serie', 'libros'];
 
   var publications = {
     cupea: {
@@ -581,26 +442,28 @@ window.CERIR_DATA = (function () {
       lead: 'Revista semestral del CERIR. Desde el número 123 inicia su “nueva época”, con referato acreditado.',
       items: [
         {
-          id: 'cupea-126', year: 2026, number: 126, pages: 212, title: 'CUPEA N.º 126',
-          short: 'Dossier: disputas por los recursos estratégicos en el Atlántico Sur.',
-          desc: 'Número de la “nueva época” de CUPEA dedicado a las disputas por los recursos estratégicos en el Atlántico Sur, con artículos sobre pesca, minerales críticos y la proyección antártica argentina, más la sección habitual de reseñas bibliográficas.',
-          file: 'assets/pdf/cupea-126.pdf'
+          id: 'cupea-144', year: 2026, number: 144, title: 'CUPEA N.º 144',
+          short: 'Edición correspondiente a diciembre de 2026.',
+          cover: 'assets/img/cupea-num-144.jpg',
+          file: 'assets/pdf/cupea-144.pdf'
         },
         {
-          id: 'cupea-125', year: 2025, number: 125, pages: 204, title: 'CUPEA N.º 125',
-          short: 'Artículos sobre cooperación Sur-Sur, Mercosur y la agenda ambiental argentina.',
-          file: 'assets/pdf/cupea-125.pdf'
+          id: 'cupea-143', year: 2026, number: 143, title: 'CUPEA N.º 143',
+          short: 'Edición correspondiente a junio de 2026.',
+          cover: 'assets/img/cupea-num-143.jpg',
+          file: 'assets/pdf/cupea-143.pdf'
         },
         {
-          id: 'cupea-124', year: 2025, number: 124, pages: 196, title: 'CUPEA N.º 124',
-          short: 'Dossier sobre negociaciones comerciales y régimen multilateral de comercio.',
-          file: 'assets/pdf/cupea-124.pdf'
+          id: 'cupea-142', year: 2025, number: 142, title: 'CUPEA N.º 142',
+          short: 'Edición correspondiente a diciembre de 2025.',
+          cover: 'assets/img/cupea-num-142.jpg',
+          file: 'assets/pdf/cupea-142.pdf'
         },
         {
-          id: 'cupea-123', year: 2024, number: 123, pages: 188, title: 'CUPEA N.º 123',
-          short: 'Primer número de la “nueva época” de la revista, con referato acreditado.',
-          desc: 'Número inaugural de la “nueva época” de CUPEA: nuevo comité editorial, sistema de referato doble ciego y acreditación ante el sistema de indexación de revistas científicas, además del dossier sobre teoría de las relaciones internacionales desde la periferia.',
-          file: 'assets/pdf/cupea-123.pdf'
+          id: 'cupea-141', year: 2025, number: 141, title: 'CUPEA N.º 141',
+          short: 'Edición correspondiente a junio de 2025.',
+          cover: 'assets/img/cupea-num-141.jpg',
+          file: 'assets/pdf/cupea-141.pdf'
         }
       ]
     },
@@ -716,15 +579,15 @@ window.CERIR_DATA = (function () {
     pubCategory: function (slug) { return publications[slug] || null; },
     /* busca un ítem por id en todas las categorías */
     pubItem: function (id) {
-      for (var i = 0; i < pubCategoryOrder.length; i++) {
-        var cat = publications[pubCategoryOrder[i]];
+      for (var key in publications) {
+        var cat = publications[key];
         var item = byId(cat.items, id);
         if (item) return { item: item, category: cat };
       }
       return null;
     },
-    /* portada de muestra: reemplazar por la tapa real del PDF */
-    cover: function (p) { return 'https://picsum.photos/seed/pub-' + p.id + '/900/1200'; },
+    /* usa la tapa real del ítem (`cover`) si existe; si no, una de muestra */
+    cover: function (p) { return p.cover || 'https://picsum.photos/seed/pub-' + p.id + '/900/1200'; },
     member: function (id) { return byId(members, id); },
     /* otros miembros que comparten al menos un eje de investigación con `id` */
     relatedMembers: function (id) {

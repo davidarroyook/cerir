@@ -32,13 +32,18 @@
         </a>
         <ul class="nav-dropdown__menu">
           <li><a href="cupea.html">CUPEA</a></li>
-          <li><a href="maestria.html#maestria-revista">MICI</a></li>
           <li><a href="publicaciones.html">Ver todo</a></li>
         </ul>
       </div>
       <a href="novedades.html">Novedades</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+
+    <div class="lang" role="group" aria-label="Idioma">
+      <button class="lang__btn is-active" type="button" lang="es" aria-pressed="true">ES</button>
+      <span class="lang__sep" aria-hidden="true">/</span>
+      <button class="lang__btn" type="button" lang="en" aria-pressed="false">EN</button>
+    </div>
 
     <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
       <span class="burger__label">Menú</span>
@@ -69,7 +74,6 @@
       <li class="nav__sub" id="navSubPublicaciones">
         <ul>
           <li><a href="cupea.html">CUPEA</a></li>
-          <li><a href="maestria.html#maestria-revista">MICI</a></li>
           <li><a href="publicaciones.html">Ver todo</a></li>
         </ul>
       </li>
@@ -261,6 +265,54 @@
   </section>
 
 </main>
+
+  <!-- ========================================================== LIBROS DE AUTORES -->
+  <section class="pubs-group" id="libros" data-cat="libros">
+    <div class="container">
+      <header class="pubs-group__head">
+        <div>
+          <p class="pubs-hero__kicker" data-reveal><span class="dot"></span> Línea editorial</p>
+          <h2 class="section-title" data-reveal>Libros de autores</h2>
+          <p class="pubs-hero__lead" data-reveal></p>
+        </div>
+        <a class="link-arrow" href="coleccion.html?cat=libros">Ver más
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+      </header>
+
+      <article class="feature" data-reveal>
+        <a class="feature__media" href="#" aria-label="Ver el último libro publicado">
+          <img src="" alt="" width="900" height="1200">
+        </a>
+        <div class="feature__body">
+          <span class="chip">Última edición</span>
+          <h3 class="feature__title"></h3>
+          <p class="feature__desc"></p>
+          <ul class="feature__meta"></ul>
+          <a class="btn btn--accent" href="#">
+            Ver publicación
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <div class="pubs-group__sub">
+        <h3 class="pubs-group__subtitle">Libros anteriores</h3>
+        <div class="carousel__nav">
+          <button class="circle-btn" type="button" data-carousel-prev="librosPrev" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" type="button" data-carousel-next="librosPrev" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel" data-carousel="librosPrev">
+        <ul class="carousel__track" tabindex="0" role="region" aria-label="Libros anteriores"></ul>
+        <div class="carousel__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
 
 <!-- ============================================================ FOOTER -->
 <footer class="footer" id="footer">

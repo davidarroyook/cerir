@@ -32,13 +32,18 @@
         </a>
         <ul class="nav-dropdown__menu">
           <li><a href="cupea.html">CUPEA</a></li>
-          <li><a href="maestria.html#maestria-revista">MICI</a></li>
           <li><a href="publicaciones.html">Ver todo</a></li>
         </ul>
       </div>
       <a href="novedades.html">Novedades</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+
+    <div class="lang" role="group" aria-label="Idioma">
+      <button class="lang__btn is-active" type="button" lang="es" aria-pressed="true">ES</button>
+      <span class="lang__sep" aria-hidden="true">/</span>
+      <button class="lang__btn" type="button" lang="en" aria-pressed="false">EN</button>
+    </div>
 
     <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
       <span class="burger__label">Menú</span>
@@ -69,7 +74,6 @@
       <li class="nav__sub" id="navSubPublicaciones">
         <ul>
           <li><a href="cupea.html">CUPEA</a></li>
-          <li><a href="maestria.html#maestria-revista">MICI</a></li>
           <li><a href="publicaciones.html">Ver todo</a></li>
         </ul>
       </li>
@@ -104,8 +108,7 @@
       <h1 class="page-head__title" data-reveal>Cuadernos de Política Exterior Argentina</h1>
       <p class="page-head__lead" data-reveal>
         Publicación semestral con sistema de referato del Centro de Estudios en Relaciones
-        Internacionales de Rosario (CERIR). ISSN 0326-7806 (edición impresa) — ISSN 1852-7213
-        (edición en línea).
+        Internacionales de Rosario (CERIR).
       </p>
       <ul class="page-head__index" data-reveal>
         <li><a href="#descripcion">Descripción</a></li>
@@ -230,7 +233,7 @@
           <h2 class="section-title" data-reveal>CUPEA</h2>
           <p class="pubs-hero__lead" data-reveal></p>
         </div>
-        <a class="link-arrow" href="coleccion.html?cat=cupea">Ver más
+        <a class="link-arrow" href="https://cupea.unr.edu.ar/index.php/revista/issue/archive">Ver más
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
         </a>
       </header>
@@ -264,6 +267,44 @@
       </div>
       <div class="carousel" data-carousel="cupeaPrev">
         <ul class="carousel__track" tabindex="0" role="region" aria-label="Ediciones anteriores de CUPEA"></ul>
+        <div class="carousel__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================== INDEXACIÓN -->
+  <section class="block" id="indexacion">
+    <div class="container">
+      <header class="journal-head">
+        <h2 class="section-title" data-reveal>Indexación y bases de datos</h2>
+        <p class="journal-head__lead" data-reveal>
+          CUPEA integra los siguientes catálogos, directorios y bases de indexación académica.
+        </p>
+      </header>
+
+      <div class="pubs-group__sub">
+        <h3 class="pubs-group__subtitle">Catálogos y directorios</h3>
+        <div class="carousel__nav">
+          <button class="circle-btn" type="button" data-carousel-prev="cupeaLogos" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+          <button class="circle-btn" type="button" data-carousel-next="cupeaLogos" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel" data-carousel="cupeaLogos">
+        <ul class="carousel__track carousel__track--logos" tabindex="0" role="region" aria-label="Bases de indexación de CUPEA">
+          <li class="logo-card"><img src="assets/img/cupea-slider1.png" alt="Dialnet" loading="lazy"></li>
+          <li class="logo-card"><img src="assets/img/cupea-slider2.png" alt="DOAJ — Directory of Open Access Journals" loading="lazy"></li>
+          <li class="logo-card"><img src="assets/img/cupea-slider3.jpg" alt="ERIH PLUS — European Reference Index for the Humanities and Social Sciences" loading="lazy"></li>
+          <li class="logo-card"><img src="assets/img/cupea-slider4.png" alt="Latindex — Catálogo 2.0" loading="lazy"></li>
+          <li class="logo-card"><img src="assets/img/cupea-slider5.png" alt="Malena" loading="lazy"></li>
+          <li class="logo-card"><img src="assets/img/cupea-slider6.png" alt="Núcleo Básico de Revistas Científicas Argentinas" loading="lazy"></li>
+          <li class="logo-card"><img src="assets/img/cupea-slider7.png" alt="CRUE Universidades Españolas — Red de Bibliotecas REBIUN" loading="lazy"></li>
+          <li class="logo-card"><img src="assets/img/cupea-slider8.png" alt="RepHipUNR — Aprendizaje e Investigación" loading="lazy"></li>
+          <li class="logo-card"><img src="assets/img/cupea-slider9.png" alt="SHERPA/RoMEO" loading="lazy"></li>
+        </ul>
         <div class="carousel__bar" aria-hidden="true"><span></span></div>
       </div>
     </div>
