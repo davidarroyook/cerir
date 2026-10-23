@@ -68,12 +68,12 @@
     $('#pName').textContent = m.name;
     $('#pRole').textContent = m.role;
     $('#pArea').textContent = m.area;
-    $('#pLines').innerHTML = chips(m.lines);
+    $('#pLines').innerHTML = m.lines.length ? chips(m.lines) : '';
 
     $('#pData').innerHTML = [
       ['Formación', m.degree],
       ['En el CERIR desde', m.since],
-      ['Correo', '<a href="mailto:' + mailOf(m) + '">' + mailOf(m) + '</a>'],
+      ['Correo', mailOf(m)],
       ['Ubicación', m.office]
     ].map(function (row) {
       return '<div class="data-list__row"><dt>' + esc(row[0]) + '</dt><dd>' + row[1] + '</dd></div>';
@@ -97,7 +97,10 @@
   }
 
   function mailOf(m) {
-    return m.id.replace(/-/g, '.') + '@cerir.unr.edu.ar';
+    if (!m.email) return 'Información no disponible';
+    return m.email.split(' / ').map(function (e) {
+      return '<a href="mailto:' + esc(e) + '">' + esc(e) + '</a>';
+    }).join(' / ');
   }
 
   function relatedMemberCard(m) {
@@ -119,24 +122,18 @@
   /* ============================================================
      Índice de miembros (indice.html): todos, A-Z por apellido
      ============================================================ */
-  function surname(name) {
-    var parts = name.trim().split(' ');
-    return parts[parts.length - 1];
-  }
-  function firstNames(name) {
-    var parts = name.trim().split(' ');
-    return parts.slice(0, -1).join(' ');
-  }
+  function surname(m) { return m.surname; }
+  function firstNames(m) { return m.givenNames; }
 
   function renderMemberIndex() {
     var members = DATA.members.slice().sort(function (a, b) {
-      return surname(a.name).localeCompare(surname(b.name), 'es');
+      return surname(a).localeCompare(surname(b), 'es') || firstNames(a).localeCompare(firstNames(b), 'es');
     });
 
     var order = [];
     var groups = {};
     members.forEach(function (m) {
-      var letter = surname(m.name).charAt(0).toUpperCase();
+      var letter = surname(m).normalize('NFD').charAt(0).toUpperCase();
       if (!groups[letter]) { groups[letter] = []; order.push(letter); }
       groups[letter].push(m);
     });
@@ -149,7 +146,7 @@
             groups[letter].map(function (m) {
               return '' +
                 '<li><a href="miembro.html?id=' + encodeURIComponent(m.id) + '">' +
-                  '<span class="index-list__name">' + esc(surname(m.name)) + ', ' + esc(firstNames(m.name)) + '</span>' +
+                  '<span class="index-list__name">' + esc(surname(m)) + (firstNames(m) ? ', ' + esc(firstNames(m)) : '') + '</span>' +
                   '<span class="index-list__role">' + esc(m.role) + '</span>' +
                 '</a></li>';
             }).join('') +
