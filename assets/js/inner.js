@@ -312,10 +312,9 @@
   /* --- publicaciones.html: las 4 colecciones, cada una con su
      última edición destacada y un carrusel de ediciones anteriores --- */
   function renderPublicationsOverview() {
-    DATA.pubCategoryOrder.forEach(function (slug) {
-      var root = document.querySelector('[data-cat="' + slug + '"]');
-      var cat = DATA.pubCategory(slug);
-      if (!root || !cat) return;
+    Array.prototype.forEach.call(document.querySelectorAll('[data-cat]'), function (root) {
+      var cat = DATA.pubCategory(root.getAttribute('data-cat'));
+      if (!cat) return;
 
       $('.pubs-hero__lead', root).textContent = cat.lead;
 

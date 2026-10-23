@@ -473,23 +473,27 @@ window.CERIR_DATA = (function () {
       lead: 'Revista de la Maestría en Relaciones Internacionales, editada en el Portal de Revistas de la UNR.',
       items: [
         {
-          id: 'mici-v9n2', year: 2025, label: 'Vol. 9, N.º 2', title: 'Integración y Cooperación Internacional — vol. 9, n.º 2',
-          short: 'Artículos de tesistas de la Maestría sobre integración regional y cooperación internacional.',
+          id: 'mici-43', year: 2026, label: 'N.º 43', title: 'Integración y Cooperación Internacional — N.º 43',
+          short: 'Edición correspondiente a julio-diciembre de 2026.',
+          cover: 'assets/img/mici-43.jpg',
           externalUrl: 'https://revista-mici.unr.edu.ar/index.php/revistamici'
         },
         {
-          id: 'mici-v9n1', year: 2025, label: 'Vol. 9, N.º 1', title: 'Integración y Cooperación Internacional — vol. 9, n.º 1',
-          short: 'Dossier sobre cooperación Sur-Sur y organismos regionales.',
+          id: 'mici-42', year: 2026, label: 'N.º 42', title: 'Integración y Cooperación Internacional — N.º 42',
+          short: 'Edición correspondiente a enero-junio de 2026.',
+          cover: 'assets/img/mici-42.jpg',
           externalUrl: 'https://revista-mici.unr.edu.ar/index.php/revistamici'
         },
         {
-          id: 'mici-v8n2', year: 2024, label: 'Vol. 8, N.º 2', title: 'Integración y Cooperación Internacional — vol. 8, n.º 2',
-          short: 'Artículos sobre Mercosur, integración física y agendas fronterizas.',
+          id: 'mici-41', year: 2025, label: 'N.º 41', title: 'Integración y Cooperación Internacional — N.º 41',
+          short: 'Edición correspondiente a julio-diciembre de 2025.',
+          cover: 'assets/img/mici-41.jpg',
           externalUrl: 'https://revista-mici.unr.edu.ar/index.php/revistamici'
         },
         {
-          id: 'mici-v8n1', year: 2024, label: 'Vol. 8, N.º 1', title: 'Integración y Cooperación Internacional — vol. 8, n.º 1',
-          short: 'Número monográfico sobre teoría y métodos de la integración regional.',
+          id: 'mici-40', year: 2025, label: 'N.º 40', title: 'Integración y Cooperación Internacional — N.º 40',
+          short: 'Edición correspondiente a enero-junio de 2025.',
+          cover: 'assets/img/mici-40.jpg',
           externalUrl: 'https://revista-mici.unr.edu.ar/index.php/revistamici'
         }
       ]
