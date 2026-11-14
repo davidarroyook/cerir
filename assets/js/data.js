@@ -442,25 +442,25 @@ window.CERIR_DATA = (function () {
       lead: 'Revista semestral del CERIR. Desde el número 123 inicia su “nueva época”, con referato acreditado.',
       items: [
         {
-          id: 'cupea-144', year: 2026, number: 144, title: 'CUPEA N.º 144',
+          id: 'cupea-144', year: 2026, number: 144, title: 'Cuadernos de Política Exterior Argentina N.º 144',
           short: 'Edición correspondiente a diciembre de 2026.',
           cover: 'assets/img/cupea-num-144.jpg',
           file: 'assets/pdf/cupea-144.pdf'
         },
         {
-          id: 'cupea-143', year: 2026, number: 143, title: 'CUPEA N.º 143',
+          id: 'cupea-143', year: 2026, number: 143, title: 'Cuadernos de Política Exterior Argentina N.º 143',
           short: 'Edición correspondiente a junio de 2026.',
           cover: 'assets/img/cupea-num-143.jpg',
           file: 'assets/pdf/cupea-143.pdf'
         },
         {
-          id: 'cupea-142', year: 2025, number: 142, title: 'CUPEA N.º 142',
+          id: 'cupea-142', year: 2025, number: 142, title: 'Cuadernos de Política Exterior Argentina N.º 142',
           short: 'Edición correspondiente a diciembre de 2025.',
           cover: 'assets/img/cupea-num-142.jpg',
           file: 'assets/pdf/cupea-142.pdf'
         },
         {
-          id: 'cupea-141', year: 2025, number: 141, title: 'CUPEA N.º 141',
+          id: 'cupea-141', year: 2025, number: 141, title: 'Cuadernos de Política Exterior Argentina N.º 141',
           short: 'Edición correspondiente a junio de 2025.',
           cover: 'assets/img/cupea-num-141.jpg',
           file: 'assets/pdf/cupea-141.pdf'

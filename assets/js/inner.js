@@ -284,7 +284,7 @@
           '<span class="pub-card__meta">' + pubCardMeta(p, cat) + '</span>' +
           '<h3 class="pub-card__title">' + esc(p.title) + '</h3>' +
           '<p class="pub-card__desc">' + esc(p.short) + '</p>' +
-          '<span class="pub-card__more">Ver detalle' + ARROW_ICON + '</span>' +
+          '<span class="pub-card__more">Ver publicación' + ARROW_ICON + '</span>' +
         '</a>' +
       '</li>';
   }
